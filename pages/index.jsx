@@ -6,7 +6,7 @@ import { classNames } from "../utils/helper";
 import { useMount } from "react-use";
 export default function Index() {
 	const [isLoaded, setIsLoaded] = React.useState(false);
-	useMount(() => setTimeout(() => setIsLoaded(true), 500));
+	useMount(() => setTimeout(() => setIsLoaded(true), 0));
 	return (
 		<>
 			<div className="sticky top-0 z-10 bg-white">
@@ -19,20 +19,20 @@ export default function Index() {
 					</aside>
 					<motion.main>
 						<div className={classNames("flex max-w-4xl flex-col justify-center min-h-[calc(100vh-82px)]", isLoaded && "animate-fade-in-start")}>
-							<section className="pb-6">
-								<article className="layout">
+							<section className="pb-6 mt-24">
+								<article>
 									<h1 className="md:mb-2 animate-fade-in-initial fade-in-1">Hi ! </h1>
 									<h1 className="mb-2 animate-fade-in-initial fade-in-2">
 										My name is <span className="accent no-under bg-accent-200/50">Svay Thavirak</span>
 									</h1>
-									<p className="prose dark:text-light animate-fade-in-initial fade-in-3">
+									<p className=" dark:text-light animate-fade-in-initial fade-in-3">
 										Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt consequuntur rem itaque dolorum voluptatem voluptatum perspiciatis quae
 										nemo unde, architecto accusantium, blanditiis est accusamus saepe excepturi reprehenderit deserunt numquam tenetur?
 									</p>
 								</article>
 							</section>
 							<section className="py-6">
-								<article className="layout">
+								<article>
 									<h2 className="mb-2 animate-fade-in-initial fade-in-4">Current Favorite Tech Stack</h2>
 									<figure className="animate-fade-in-initial fade-in-5">{/* <TechStack /> */}</figure>
 								</article>
