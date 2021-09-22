@@ -32,7 +32,8 @@ export default function Index() {
 										My name is <span className="text-blue-700 dark:text-blue-600">Svay Thavirak</span>
 									</h1>
 									<p className="dark:text-light animate-fade-in-initial fade-in-3">
-										I'm a hard working and quick learner MIS students at SETEC Institute. Currently, I'm fascinated in Frontend Development and UI & UX design.
+										I&apos;m a hard working and quick learner MIS students at SETEC Institute. Currently, I&apos;m fascinated in Frontend Development and UI &
+										UX design.
 									</p>
 								</article>
 							</section>
