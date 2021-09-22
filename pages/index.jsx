@@ -1,6 +1,6 @@
 import * as React from "react";
 import { motion } from "framer-motion";
-import Nav from "../components/Nav";
+import Nav from "../components/Nav.jsx";
 import LeftSidebar from "../components/LeftSidebar";
 import RightSidebar from "../components/RightSidebar";
 import TechStack from "../components/TechStack";
