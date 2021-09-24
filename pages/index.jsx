@@ -1,10 +1,9 @@
 import * as React from "react";
 import { motion } from "framer-motion";
-import Nav from "../components/Nav.jsx";
+import Nav from "../components/Nav";
 import LeftSidebar from "../components/LeftSidebar";
 import RightSidebar from "../components/RightSidebar";
 import TechStack from "../components/TechStack";
-import { classNames } from "../utils/helper";
 import { useMount } from "react-use";
 
 export default function Index() {
@@ -13,12 +12,12 @@ export default function Index() {
 	return (
 		<>
 			<Nav />
-			<div className="px-24 py-10">
-				<div className="flex justify-center">
-					<LeftSidebar />
-					<motion.main>
-						<div className={classNames("flex max-w-4xl flex-col justify-center min-h-[calc(100vh-82px)]", isLoaded && "animate-fade-in-start")}>
-							<section className="pb-6 mt-24">
+			<div className="flex w-full justify-center">
+				<LeftSidebar />
+				<div className="flex-col w-full">
+					<div id="home" className={`min-h-screen snap snap-y snap-proximity ${isLoaded && "animate-fade-in-start"}`}>
+						<div className="lg:pt-[10%] lg:px-[20%] pt-[25%] px-[12%]">
+							<section className="pb-6">
 								<article>
 									<motion.h1
 										inherit={{ y: -100 }}
@@ -46,9 +45,19 @@ export default function Index() {
 								</article>
 							</section>
 						</div>
-					</motion.main>
-					<RightSidebar />
+					</div>
+					<div id="resume" className={`text-white bg-blue-700 min-h-screen snap snap-y snap-proximity ${isLoaded && "animate-fade-in-start"}`}>
+						<h1 className="animate-fade-in-initial fade-in-2">
+							My name is <span className="text-blue-700 dark:text-blue-600">Svay Thavirak</span>
+						</h1>
+					</div>
+					<div id="contact" className={`min-h-screen snap snap-y snap-proximity ${isLoaded && "animate-fade-in-start"}`}>
+						<h1 className="animate-fade-in-initial fade-in-2">
+							My name is <span className="text-blue-700 dark:text-blue-600">Svay Thavirak</span>
+						</h1>
+					</div>
 				</div>
+				<RightSidebar />
 			</div>
 		</>
 	);
