@@ -13,7 +13,7 @@ const techObject = {
 				<a href="https://nextjs.org">Next.js</a>, currently my go-to framework because of the static generation, dynamic paths, and built-in api.
 			</p>
 		),
-		() => <SiNextDotJs className="w-10 h-10 text-dark dark:text-light dark:hover:text-blue-700 hover:text-blue-700 md:w-12 md:h-12" />,
+		() => <SiNextDotJs className="w-10 h-10 text-dark dark:text-light dark:hover:text-blue-600 hover:text-blue-700 md:w-12 md:h-12" />,
 	],
 	react: [
 		() => (
@@ -21,7 +21,7 @@ const techObject = {
 				<a href="https://reactjs.org/">Create React App</a>, first frontend framework that I learned, great if you are making an authenticated website.
 			</p>
 		),
-		() => <SiReact className="w-10 h-10 text-dark dark:text-light dark:hover:text-blue-700 hover:text-blue-700 md:w-12 md:h-12" />,
+		() => <SiReact className="w-10 h-10 text-dark dark:text-light dark:hover:text-blue-600 hover:text-blue-700 md:w-12 md:h-12" />,
 	],
 
 	tailwindcss: [
@@ -31,7 +31,7 @@ const techObject = {
 				<a href="https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss">extension</a>.
 			</p>
 		),
-		() => <SiTailwindcss className="w-10 h-10 text-dark dark:text-light dark:hover:text-blue-700 hover:text-blue-700 md:w-12 md:h-12" />,
+		() => <SiTailwindcss className="w-10 h-10 text-dark dark:text-light dark:hover:text-blue-600 hover:text-blue-700 md:w-12 md:h-12" />,
 	],
 	nodejs: [
 		() => (
@@ -40,7 +40,7 @@ const techObject = {
 				backend built-in.
 			</p>
 		),
-		() => <SiNodeDotJs className="w-10 h-10 text-dark dark:text-light dark:hover:text-blue-700 hover:text-blue-700 md:w-12 md:h-12" />,
+		() => <SiNodeDotJs className="w-10 h-10 text-dark dark:text-light dark:hover:text-blue-600 hover:text-blue-700 md:w-12 md:h-12" />,
 	],
 
 	chakraui: [
@@ -52,7 +52,7 @@ const techObject = {
 		),
 		() => (
 			<svg
-				className="w-10 fill-current h-10 text-gray-800 dark:text-white dark:hover:text-blue-700 hover:text-blue-700 md:w-12 md:h-12"
+				className="w-10 fill-current h-10 text-gray-800 dark:text-white dark:hover:text-blue-600 hover:text-blue-700 md:w-12 md:h-12"
 				width="24"
 				height="24"
 				viewBox="0 0 24 24"
@@ -60,7 +60,7 @@ const techObject = {
 			>
 				<path d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24C18.6274 24 24 18.6274 24 12Z" />
 				<path
-					className="fill-current text-white dark:text-gray-800"
+					className="fill-current text-sand-200 dark:text-gray-800"
 					d="M6.49569 12.5122L14.6755 4.38872C14.8283 4.23696 15.0742 4.42164 14.9711 4.6107L11.9266 10.1907C11.8586 10.3151 11.9487 10.4669 12.0905 10.4669H17.3518C17.5213 10.4669 17.6031 10.6745 17.4792 10.7902L8.25947 19.3949C8.09416 19.5492 7.8481 19.3318 7.98082 19.1487L12.3452 13.1279C12.4347 13.0045 12.3466 12.8315 12.1941 12.8315H6.6273C6.46059 12.8315 6.37741 12.6297 6.49569 12.5122V12.5122Z"
 					fill="white"
 				/>

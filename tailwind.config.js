@@ -61,5 +61,5 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [require("tailwindcss-scroll-snap")],
+	plugins: [],
 };

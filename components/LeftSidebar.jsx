@@ -3,7 +3,7 @@ import { FaTelegramPlane } from "react-icons/fa";
 
 export default function LeftSidebar() {
 	return (
-		<aside className="fixed left-5 bottom-0 md:block hidden">
+		<aside className="fixed left-5 bottom-0 md:block hidden animate-fade-in-initial fade-in-8">
 			<ul className="flex h-full overflow-hidden flex-col gap-6 pt-2 items-center">
 				<li>
 					<TiSocialFacebook size="1.8rem" className="hoverable-social-media" />
