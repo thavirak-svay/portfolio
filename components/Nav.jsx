@@ -1,12 +1,13 @@
 import * as React from "react";
-import Link from "next/link";
 import { FiMoon, FiSun } from "react-icons/fi";
 import { useTheme } from "next-themes";
 import { Disclosure } from "@headlessui/react";
 import { HiX, HiMenu } from "react-icons/hi";
 import { motion } from "framer-motion";
 
-import { menu } from "../data/menu";
+import { menu } from "@/data/menu";
+import { lightDarkToggleVariant, navbarItemVariant, navbarContainerVariant, mobileNavbarContainerVariant } from "@/utils/framerMotionAnimation";
+
 export default function Nav() {
 	const [scrollChange, setScrollChange] = React.useState(false);
 	const [active, setActive] = React.useState("home");
@@ -20,7 +21,7 @@ export default function Nav() {
 			setScrollChange(false);
 		}
 		document.querySelectorAll("section").forEach((section) => {
-			if (window.scrollY >= section.offsetTop - 50) {
+			if (window.scrollY >= section.offsetTop - 60) {
 				setActive(section.getAttribute("id"));
 			}
 		});
@@ -34,27 +35,38 @@ export default function Nav() {
 			{({ open }) => (
 				<>
 					<header className={`fixed w-full ${scrollChange && "border-b-2"} border-gray-800 dark:border-gray-50 top-0 z-10 p-4 bg-sand-200 dark:bg-sea-green-700`}>
-						<div className="flex md:hidden justify-between">
-							<Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-blue-700 hover:text-white hover:bg-blue-700 dark:text-gray-50 dark:hover:text-white dark:hover:bg-blue-600">
-								<span className="sr-only" />
-								{open ? <HiX size={18} aria-hidden="true" /> : <HiMenu size={18} aria-hidden="true" />}
-							</Disclosure.Button>
-							<button
+						<motion.div variants={mobileNavbarContainerVariant} initial="initial" animate="animate" className="flex md:hidden justify-between">
+							<motion.div variants={navbarItemVariant}>
+								<Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-blue-700 hover:text-white hover:bg-blue-700 dark:text-gray-50 dark:hover:text-white dark:hover:bg-blue-600">
+									<span className="sr-only" />
+									{open ? <HiX size={18} aria-hidden="true" /> : <HiMenu size={18} aria-hidden="true" />}
+								</Disclosure.Button>
+							</motion.div>
+							<motion.button
+								variants={navbarItemVariant}
 								className="absolute right-7 inline-flex items-center justify-center p-2 rounded-md text-blue-700 hover:text-white hover:bg-blue-700 dark:text-gray-50 dark:hover:text-white dark:hover:bg-blue-600"
 								onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
 							>
-								{theme === "light" ? <FiMoon size={18} /> : <FiSun size={18} />}
-							</button>
-						</div>
-						<div className="md:max-w-sm mx-auto hidden md:flex justify-between uppercase text-sm font-medium tracking-wider">
-							{menu.map(({ id, name }, i) => (
-								<motion.div
-									initial={{ y: -20, opacity: 0 }}
-									animate={{ y: 0, opacity: 1 }}
-									transition={{ delay: (i * 1) / 8, duration: 0.5, type: "spring" }}
-									key={id}
-									className="flex flex-col items-center group"
-								>
+								{theme === "light" ? (
+									<motion.div key="moon" variants={lightDarkToggleVariant} positionTransition initial="initial" animate="animate" exit="exit">
+										<FiMoon size={18} />
+									</motion.div>
+								) : (
+									<motion.div key="sun" variants={lightDarkToggleVariant} positionTransition initial="initial" animate="animate" exit="exit">
+										<FiSun size={18} />
+									</motion.div>
+								)}
+							</motion.button>
+						</motion.div>
+
+						<motion.div
+							variants={navbarContainerVariant}
+							initial="initial"
+							animate="animate"
+							className="md:max-w-sm mx-auto hidden md:flex justify-between uppercase text-sm font-medium tracking-wider"
+						>
+							{menu.map(({ id, name }) => (
+								<motion.div key={id} variants={navbarItemVariant} className="flex flex-col items-center group">
 									<span
 										className={`rounded-[50%] group-hover:bg-blue-600 dark:group-hover:bg-blue-700 w-1 h-1 transition duration-200 ${
 											active === id ? "bg-blue-700 dark:bg-blue-600" : ""
@@ -71,25 +83,37 @@ export default function Nav() {
 									</a>
 								</motion.div>
 							))}
-
 							<button
 								className="absolute right-7 inline-flex items-center justify-center p-2 rounded-md text-blue-700 hover:text-white hover:bg-blue-700 dark:text-gray-50 dark:hover:text-white dark:hover:bg-blue-600"
 								onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
 							>
-								{theme === "light" ? <FiMoon size={18} /> : <FiSun size={18} />}
+								{theme === "light" ? (
+									<motion.div key="moon" variants={lightDarkToggleVariant} positionTransition initial="initial" animate="animate" exit="exit">
+										<FiMoon size={18} />
+									</motion.div>
+								) : (
+									<motion.div key="sun" variants={lightDarkToggleVariant} positionTransition initial="initial" animate="animate" exit="exit">
+										<FiSun size={18} />
+									</motion.div>
+								)}
 							</button>
-						</div>
+						</motion.div>
 					</header>
 
 					<Disclosure.Panel className="fixed w-full z-10 top-14 bg-sand-200 dark:bg-sea-green-700">
-						<div className="flex flex-col bg-sand-200 w-full md:hidden border-b-2 border-blue-700 dark:border-gray-50 dark:bg-sea-green-700 justify-between uppercase text-sm font-medium tracking-wider gap-3 px-8 py-2">
+						<motion.div
+							variants={navbarContainerVariant}
+							initial="initial"
+							animate="animate"
+							className="flex flex-col bg-sand-200 w-full md:hidden border-b-2 border-blue-700 dark:border-gray-50 dark:bg-sea-green-700 justify-between uppercase text-sm font-medium tracking-wider gap-3 px-8 py-2"
+						>
 							{menu.map(({ id, name }) => (
-								<div key={id} className="flex items-center group">
+								<motion.div key={id} variants={navbarItemVariant} className="flex items-center group">
 									<span
 										className={`rounded-[50%] group-hover:bg-blue-600 dark:group-hover:bg-blue-700 w-1 h-1 transition duration-200 ${
 											active === id ? "bg-blue-700 dark:bg-blue-600" : ""
 										}`}
-									></span>
+									/>
 									<a
 										href={`#${id}`}
 										className={`ml-5 text-gray-800 dark:text-gray-50 group-hover:text-blue-600 dark:group-hover:text-blue-700 py-2   ${
@@ -98,9 +122,9 @@ export default function Nav() {
 									>
 										{name}
 									</a>
-								</div>
+								</motion.div>
 							))}
-						</div>
+						</motion.div>
 					</Disclosure.Panel>
 				</>
 			)}

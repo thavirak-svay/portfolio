@@ -1,7 +1,11 @@
+import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
+
+import { sidebarVariant } from "@/utils/framerMotionAnimation";
+
 export default function RightSidebar() {
 	return (
-		<div className="fixed right-5 bottom-0 md:block hidden animate-fade-in-initial fade-in-8">
+		<motion.aside variants={sidebarVariant} initial="initial" animate="animate" className="fixed right-5 bottom-0 md:block hidden">
 			<ul className="flex h-full overflow-hidden flex-col pt-2 gap-6 items-center">
 				<li>
 					<a style={{ writingMode: "vertical-lr" }} className="hoverable-social-media" href="#">
@@ -13,6 +17,6 @@ export default function RightSidebar() {
 					<div className="h-24 w-0.5 bg-gray-900 dark:bg-white"></div>
 				</li>
 			</ul>
-		</div>
+		</motion.aside>
 	);
 }
