@@ -1,5 +1,6 @@
 const { fontFamily } = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
+const plugin = require("tailwindcss/plugin");
 
 module.exports = {
 	mode: "jit",
@@ -61,5 +62,18 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [],
+	plugins: [
+		plugin(function ({ addUtilities }) {
+			const newUtilities = {
+				".vertical-lr": {
+					writingMode: "vertical-lr",
+				},
+				".vertical-rl": {
+					writingMode: "vertical-rl",
+				},
+			};
+
+			addUtilities(newUtilities, ["responsive", "hover"]);
+		}),
+	],
 };

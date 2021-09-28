@@ -37,7 +37,7 @@ export default function Nav() {
 					<header
 						className={`fixed w-full border-b-2 ${
 							scrollChange ? "border-gray-800 dark:border-gray-50" : "border-transparent dark:border-transparent"
-						}  dark:border-gray-50 top-0 z-10 h-[60px] md:h-[70px] bg-sand-200 dark:bg-sea-green-700`}
+						}  dark:border-gray-50 top-0 z-20 h-[60px] md:h-[70px] bg-sand-200 dark:bg-sea-green-700`}
 					>
 						<motion.div variants={mobileNavbarContainerVariant} initial="initial" animate="animate" className="flex md:hidden justify-between h-full items-center mx-4">
 							<motion.div variants={navbarItemVariant}>
@@ -104,7 +104,7 @@ export default function Nav() {
 						</motion.div>
 					</header>
 
-					<Disclosure.Panel className="fixed w-full z-10 top-14 bg-sand-200 dark:bg-sea-green-700">
+					<Disclosure.Panel className="fixed w-full z-30 top-14 bg-sand-200 dark:bg-sea-green-700">
 						<motion.div
 							variants={navbarContainerVariant}
 							initial="initial"
