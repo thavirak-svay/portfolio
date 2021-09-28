@@ -5,7 +5,7 @@ import { sidebarVariant } from "@/utils/framerMotionAnimation";
 
 export default function RightSidebar() {
 	return (
-		<motion.aside variants={sidebarVariant} initial="initial" animate="animate" className="fixed right-5 bottom-0 md:block hidden">
+		<motion.aside variants={sidebarVariant} initial="initial" animate="animate" className="fixed right-10 bottom-0 md:block hidden">
 			<ul className="flex h-full overflow-hidden flex-col pt-2 gap-6 items-center">
 				<li>
 					<a style={{ writingMode: "vertical-lr" }} className="hoverable-social-media" href="#">

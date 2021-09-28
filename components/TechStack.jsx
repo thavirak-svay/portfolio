@@ -1,62 +1,39 @@
 import Tippy from "@tippyjs/react";
-import { motion } from "framer-motion";
 import { SiNextDotJs, SiReact, SiTailwindcss, SiNodeDotJs } from "react-icons/si";
+import CustomLink from "./CustomLink";
 
 const currentTechStack = ["react", "nextjs", "tailwindcss", "nodejs", "chakraui", "reactquery"];
 
 const techObject = {
 	nextjs: [
 		() => (
-			<p className="text-gray-800 dark:text-white">
-				<span className="relative w-max group">
-					<a className="text-blue-700 dark:text-blue-600" href="https://nextjs.org">
-						Next.js
-					</a>
-					<span className="absolute -bottom-0.5 group-hover:w-full left-0 w-0 transition-all h-0.5 bg-gray-800 dark:bg-white" />
-				</span>
-				, I really enjoy learning Next.js because of its cool features such as static site generation, dynamic paths and api route.
+			<p>
+				<CustomLink href="https://nextjs.org" name="Next.js" />, I really enjoy learning Next.js because of its cool features such as static site generation, dynamic paths and api
+				route.
 			</p>
 		),
 		() => <SiNextDotJs className="w-10 h-10 text-dark dark:text-light dark:hover:text-blue-600 hover:text-blue-700 md:w-12 md:h-12" />,
 	],
 	react: [
 		() => (
-			<p className="text-gray-800 dark:text-white">
-				<span className="relative w-max group">
-					<a className="text-blue-700 dark:text-blue-600" href="https://reactjs.org">
-						Create React App
-					</a>
-					<span className="absolute -bottom-0.5 group-hover:w-full left-0 w-0 transition-all h-0.5 bg-gray-800 dark:bg-white" />
-				</span>
-				, where I started my frontend development journey, great for building an authenticated website.
+			<p>
+				<CustomLink href="https://reactjs.org" name="Create React App" />, where I started my frontend development journey, great for building an authenticated website.
 			</p>
 		),
 		() => <SiReact className="w-10 h-10 text-dark dark:text-light dark:hover:text-blue-600 hover:text-blue-700 md:w-12 md:h-12" />,
 	],
 	tailwindcss: [
 		() => (
-			<p className="text-gray-800 dark:text-white">
-				<span className="relative w-max group">
-					<a className="text-blue-700 dark:text-blue-600" href="https://tailwindcss.com">
-						Tailwind CSS
-					</a>
-					<span className="absolute -bottom-0.5 group-hover:w-full left-0 w-0 transition-all h-0.5 bg-gray-800 dark:bg-white" />
-				</span>
-				, an utility-first CSS framework is such a breeze to work with the more I use it the more I like it.
+			<p>
+				<CustomLink href="https://tailwindcss.com" name="Tailwind CSS" />, an utility-first CSS framework is such a breeze to work with the more I use it the more I like it.
 			</p>
 		),
 		() => <SiTailwindcss className="w-10 h-10 text-dark dark:text-light dark:hover:text-blue-600 hover:text-blue-700 md:w-12 md:h-12" />,
 	],
 	nodejs: [
 		() => (
-			<p className="text-gray-800 dark:text-white">
-				<span className="relative w-max group">
-					<a className="text-blue-700 dark:text-blue-600" href="https://nodejs.org">
-						Node.js
-					</a>
-					<span className="absolute -bottom-0.5 group-hover:w-full left-0 w-0 transition-all h-0.5 bg-gray-800 dark:bg-white" />
-				</span>
-				, simple but powerful backend language so you don&apos;t need to learn another language.
+			<p>
+				<CustomLink href="https://nodejs.org" name="Node.js" />, simple but powerful backend language so you don&apos;t need to learn another language.
 			</p>
 		),
 		() => <SiNodeDotJs className="w-10 h-10 text-dark dark:text-light dark:hover:text-blue-600 hover:text-blue-700 md:w-12 md:h-12" />,
@@ -64,14 +41,9 @@ const techObject = {
 
 	chakraui: [
 		() => (
-			<p className="text-gray-800 dark:text-white">
-				<span className="relative w-max group">
-					<a className="text-blue-700 dark:text-blue-600" href="https://chakra-ui.com/">
-						Chakra UI
-					</a>
-					<span className="absolute -bottom-0.5 group-hover:w-full left-0 w-0 transition-all h-0.5 bg-gray-800 dark:bg-white" />
-				</span>
-				, a ready-to-use component library, comes with all the styling benefits of Tailwind CSS that will give you an ability to a build beautiful website at fast pace.
+			<p>
+				<CustomLink href="https://chakra-ui.com" name="Chakra UI" />, a ready-to-use component library, comes with all the styling benefits of Tailwind CSS that will give you an
+				ability to a build beautiful website at fast pace.
 			</p>
 		),
 		() => (
@@ -93,28 +65,9 @@ const techObject = {
 	],
 	reactquery: [
 		() => (
-			<p className="text-gray-800 dark:text-white">
-				<span className="relative w-max group">
-					<a className="text-blue-700 dark:text-blue-600" href="https://chakra-ui.com/">
-						React Query
-					</a>
-					<span className="absolute -bottom-0.5 group-hover:w-full left-0 w-0 transition-all h-0.5 bg-gray-800 dark:bg-white" />
-				</span>{" "}
-				from the author{" "}
-				<span className="relative w-max group">
-					<a className="text-blue-700 dark:text-blue-600" href="https://github.com/tannerlinsley">
-						tannerlinsley
-					</a>
-					<span className="absolute -bottom-0.5 group-hover:w-full left-0 w-0 transition-all h-0.5 bg-gray-800 dark:bg-white" />
-				</span>
-				, great react hooks for data fetching and caching, the <a href="https://swr.vercel.app/docs/revalidation#revalidate-on-focus">revalidate on focus</a> is unreal.{" "}
-				<span className="relative w-max group">
-					<a className="text-blue-700 dark:text-blue-600" href="https://swr.vercel.app">
-						SWR
-					</a>
-					<span className="absolute -bottom-0.5 group-hover:w-full left-0 w-0 transition-all h-0.5 bg-gray-800 dark:bg-white" />
-				</span>{" "}
-				is also a great alternative to this.
+			<p>
+				<CustomLink href="https://react-query.tanstack.com" name="React Query" /> from the author <CustomLink href="https://github.com/tannerlinsley" name="tannerlinsley" />, great
+				react hooks for data fetching and caching, the revalidate on focus is unreal. <CustomLink href="https://swr.vercel.app" name="SWR" /> is also a great alternative to this.
 			</p>
 		),
 		() => (
@@ -140,10 +93,7 @@ const techObject = {
 
 export default function TechStack() {
 	return (
-		<motion.div
-			className="flex mt-2 space-x-2 md:space-x-8"
-			//   variants={fadeInAndUp}
-		>
+		<div className="flex mt-2 space-x-2 md:space-x-8">
 			{currentTechStack.map((tech, index) => (
 				<Tippy
 					key={index}
@@ -151,9 +101,9 @@ export default function TechStack() {
 					interactive={true}
 					content={<span className="inline-block p-2 bg-sand-100 dark:bg-sea-green-500 rounded-md shadow-md dark:bg-dark border-thin">{techObject[tech][0]()}</span>}
 				>
-					<motion.button className="rounded-sm md:w-12 ring-vis">{techObject[tech][1]()}</motion.button>
+					<button className="rounded-sm md:w-12 ring-vis">{techObject[tech][1]()}</button>
 				</Tippy>
 			))}
-		</motion.div>
+		</div>
 	);
 }

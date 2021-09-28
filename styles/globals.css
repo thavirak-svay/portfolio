@@ -40,7 +40,7 @@ html {
 }
 
 body {
-	@apply font-body relative bg-sand-200 dark:bg-sea-green-700;
+	@apply font-body relative text-gray-800 dark:text-white bg-sand-200 dark:bg-sea-green-700;
 }
 
 h1 {

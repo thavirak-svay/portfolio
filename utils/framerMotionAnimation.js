@@ -26,6 +26,10 @@ export const navbarItemVariant = {
 	initial: { y: -10, opacity: 0, transition: { ease: "easeIn" } },
 	animate: { y: 0, opacity: 1, transition: { ease: "easeIn" } },
 };
+export const mobileNavbarItemVariant = {
+	initial: { x: -10, opacity: 0, transition: { ease: "easeOut", duration: 0.2 } },
+	animate: { x: 0, opacity: 1, transition: { ease: "easeOut", duration: 0.2 } },
+};
 export const fadeUpContainerVariant = {
 	initial: {},
 	animate: {
