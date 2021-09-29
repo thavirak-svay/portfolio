@@ -48,9 +48,9 @@ export default function Index() {
 				</section>
 				<section id="resume" className={`min-h-screen`}>
 					<div className="lg:px-[25%] px-[12%]">
-						<div className="grid grid-cols-12 group ">
-							<div className="col-start-7 col-end-[-1] grid grid-rows-6 col-span-full row-start-2 row-end-5 z-[2]">
-								<div className="text-right whitespace-nowrap">
+						<div className="grid grid-cols-12 group">
+							<div className="md:col-start-7 md:col-end-[-1] grid grid-rows-6 col-span-full row-start-2 row-end-5 z-[2]">
+								<div className="text-right md:whitespace-nowrap">
 									<p className="text-blue-700 dark:text-blue-600">Featured Project</p>
 									<p className="font-semibold text-2xl">Payroll Management System</p>
 								</div>
@@ -61,7 +61,7 @@ export default function Index() {
 							</div>
 							<div className="h-80 col-start-1 col-end-8 row-start-2 row-end-5 w-full ">
 								<img
-									className="rounded-md object-cover mix-blend-multiply dark:mix-blend-screen h-full w-full  dark:brightness-50 transition"
+									className="hidden lg:block rounded-md object-cover mix-blend-multiply dark:mix-blend-screen h-full w-full  dark:brightness-50 transition"
 									src="https://source.unsplash.com/random/1920x1080"
 									alt=""
 								/>
@@ -78,7 +78,7 @@ export default function Index() {
 									temporibus eligendi quisquam excepturi eaque quod neque quas recusandae.
 								</div>
 							</div>
-							<div className=" h-80 col-start-6 col-end-13 row-start-2 row-end-5 w-full">
+							<div className="hidden lg:block h-80 col-start-6 col-end-13 row-start-2 row-end-5 w-full">
 								<img className="rounded-md object-cover h-full w-full" src="https://source.unsplash.com/random/1920x1080" alt="" />
 							</div>
 						</div>
