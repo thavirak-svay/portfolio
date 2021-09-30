@@ -4,24 +4,19 @@ import { useTheme } from "next-themes";
 import { Disclosure } from "@headlessui/react";
 import { HiX, HiMenu } from "react-icons/hi";
 import { motion } from "framer-motion";
+import { useWindowScroll, usePrevious } from "react-use";
 
 import { menu } from "@/data/menu";
 import { lightDarkToggleVariant, navbarItemVariant, navbarContainerVariant, mobileNavbarContainerVariant, mobileNavbarItemVariant } from "@/utils/framerMotionAnimation";
 
-let newScroll = 0;
-
 export default function Nav() {
-	const [scrollY, setScrollY] = React.useState(0);
 	const [active, setActive] = React.useState("home");
-
+	const { y } = useWindowScroll();
+	const previousY = usePrevious(y);
 	const { theme, setTheme } = useTheme();
 
 	React.useEffect(() => {
 		window.addEventListener("scroll", handleScrollChange);
-	}, []);
-
-	React.useEffect(() => {
-		window.addEventListener("wheel", handleWheelChange);
 	}, []);
 
 	const handleScrollChange = () => {
@@ -30,11 +25,6 @@ export default function Nav() {
 				setActive(section.getAttribute("id"));
 			}
 		});
-		window.scrollY === 0 && setScrollY(window.scrollY);
-	};
-
-	const handleWheelChange = (e) => {
-		window.scrollY !== 0 && setScrollY(e.deltaY);
 	};
 
 	return (
@@ -43,9 +33,9 @@ export default function Nav() {
 				<>
 					<header
 						id="navbar"
-						className={`fixed w-full border-b-2 ${
-							scrollY < 0 ? "border-gray-800 dark:border-gray-50" : "border-transparent dark:border-transparent"
-						}  dark:border-gray-50 z-20 ${scrollY <= 0 ? "top-0" : "top-[-70px]"} transition-all duration-500 h-[60px] md:h-[70px] bg-sand-200 dark:bg-sea-green-700`}
+						className={`fixed w-full border-b-2 ${y !== 0 ? "border-gray-800 dark:border-gray-50" : "border-transparent dark:border-transparent"}  dark:border-gray-50 z-20 ${
+							previousY >= y || y === 0 ? "top-0" : "top-[-70px]"
+						} transition-all h-[60px] md:h-[70px] bg-sand-200 dark:bg-sea-green-700`}
 					>
 						<motion.div variants={mobileNavbarContainerVariant} initial="initial" animate="animate" className="flex md:hidden justify-between h-full items-center mx-4">
 							<motion.div variants={navbarItemVariant}>
@@ -111,9 +101,8 @@ export default function Nav() {
 							</button>
 						</motion.div>
 					</header>
-
-					{scrollY <= 0 && (
-						<Disclosure.Panel className="fixed w-full z-30 top-[60px] bg-sand-200 dark:bg-sea-green-700 transition-all duration-500">
+					{y >= 0 && (
+						<Disclosure.Panel className={`fixed w-full z-30 top-[60px] bg-sand-200 dark:bg-sea-green-700 transition-all `}>
 							<motion.div
 								variants={navbarContainerVariant}
 								initial="initial"

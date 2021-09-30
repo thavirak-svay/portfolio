@@ -67,3 +67,31 @@ export const sidebarVariant = {
 		},
 	},
 };
+export const fadeInLeft = {
+	initial: {
+		opacity: 1,
+		x: -250,
+	},
+	animate: {
+		opacity: 1,
+		x: 0,
+		transition: {
+			ease: "easeOut",
+			duration: 2,
+		},
+	},
+};
+export const fadeInRight = {
+	initial: {
+		opacity: 1,
+		x: 250,
+	},
+	animate: {
+		opacity: 1,
+		x: 0,
+		transition: {
+			ease: "easeOut",
+			duration: 2,
+		},
+	},
+};

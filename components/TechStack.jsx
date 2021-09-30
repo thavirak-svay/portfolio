@@ -43,7 +43,7 @@ const techObject = {
 		() => (
 			<p>
 				<CustomLink href="https://chakra-ui.com" name="Chakra UI" />, a ready-to-use component library, comes with all the styling benefits of Tailwind CSS that will give you an
-				ability to a build beautiful website at fast pace.
+				ability to build a beautiful website at fast pace.
 			</p>
 		),
 		() => (

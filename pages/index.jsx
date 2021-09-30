@@ -7,7 +7,8 @@ import CustomLink from "@/components/CustomLink";
 import TechStack from "@/components/TechStack";
 import LeftSidebar from "@/components/LeftSidebar";
 import RightSidebar from "@/components/RightSidebar";
-import { fadeUpContainerVariant, fadeUpItemVariant } from "@/utils/framerMotionAnimation";
+import { fadeUpContainerVariant, fadeUpItemVariant, fadeInLeft, fadeInRight } from "@/utils/framerMotionAnimation";
+import InView from "@/components/InView";
 
 export default function Index() {
 	return (
@@ -47,41 +48,81 @@ export default function Index() {
 					</div>
 				</section>
 				<section id="resume" className={`min-h-screen`}>
-					<div className="lg:px-[25%] px-[12%]">
-						<div className="grid grid-cols-12 group">
-							<div className="md:col-start-7 md:col-end-[-1] grid grid-rows-6 col-span-full row-start-2 row-end-5 z-[2]">
-								<div className="text-right md:whitespace-nowrap">
-									<p className="text-blue-700 dark:text-blue-600">Featured Project</p>
-									<p className="font-semibold text-2xl">Payroll Management System</p>
+					<div className="lg:py-[5%] md:py-[8%] lg:px-[18%] md:px-[10%] pt-[10%] px-[5%]">
+						<InView variants={fadeUpContainerVariant} className="grid grid-cols-12">
+							<div className="flex flex-col gap-4 justify-between md:col-start-7 md:col-end-[-1] col-span-full row-start-1 z-[2]">
+								<div className="text-right">
+									<motion.p variants={fadeUpItemVariant} className="text-blue-700 dark:text-blue-600">
+										Featured Project
+									</motion.p>
+									<motion.p variants={fadeUpItemVariant} className="font-medium text-2xl">
+										Payroll Management System
+									</motion.p>
 								</div>
-								<div className="h-full row-start-3 row-end-5 rounded-sm ">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eum illo, saepe dolorum nihil praesentium beatae sunt alias labore, quidem vel
-									temporibus eligendi quisquam excepturi eaque quod neque quas recusandae.
+								<motion.div variants={fadeUpItemVariant} className="text-sm md:bg-blue-600 md:dark:bg-sea-green-500 text-white font-light p-4 rounded-md">
+									A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information
+									about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.
+								</motion.div>
+
+								<motion.p variants={fadeUpItemVariant} className="text-right mb-5 text-blue-700 dark:text-blue-600">
+									React , JAVA Springboot
+								</motion.p>
+							</div>
+							<motion.div variants={fadeUpItemVariant} className="md:col-end-8 col-span-full row-start-1 ">
+								<figure className="rounded-md h-full md:h-max bg-sand-200 dark:bg-blue-200 hover:bg-white  dark:hover:bg-white hover:brightness-100 duration-300 brightness-95">
+									<Image className="rounded-md mix-blend-multiply" src={require("@/public/a.png")} alt="" layout="responsive" objectFit="cover" />
+								</figure>
+							</motion.div>
+						</InView>
+						<InView variants={fadeUpContainerVariant} className="grid grid-cols-12 my-[20%]">
+							<div className="flex flex-col gap-4 justify-between md:col-end-7 col-span-full row-start-1 z-[2]">
+								<div>
+									<motion.p variants={fadeUpItemVariant} className="text-blue-700 dark:text-blue-600">
+										Featured Project
+									</motion.p>
+									<motion.p variants={fadeUpItemVariant} className="font-medium text-2xl">
+										GPS Tracking System
+									</motion.p>
 								</div>
+								<motion.div variants={fadeUpItemVariant} className="text-sm md:bg-blue-600 md:dark:bg-sea-green-500 text-white font-light p-4 rounded-md">
+									A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information
+									about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.
+								</motion.div>
+
+								<motion.p variants={fadeUpItemVariant} className="text-blue-700 mb-5 dark:text-blue-600">
+									React , JAVA Springboot
+								</motion.p>
 							</div>
-							<div className="h-80 col-start-1 col-end-8 row-start-2 row-end-5 w-full ">
-								<img
-									className="hidden lg:block rounded-md object-cover mix-blend-multiply dark:mix-blend-screen h-full w-full  dark:brightness-50 transition"
-									src="https://source.unsplash.com/random/1920x1080"
-									alt=""
-								/>
-							</div>
-						</div>
-						<div className="grid grid-cols-12">
-							<div className="col-start-1 col-end-7 grid grid-rows-6 row-start-2 row-end-5 z-[2]">
-								<div className="text-left whitespace-nowrap">
-									<p>Featured Project</p>
-									<h3>Payroll Management System</h3>
+							<motion.div variants={fadeUpItemVariant} className="md:col-start-6 md:col-end-[-1] col-span-full h-full row-start-1">
+								<figure className="rounded-md h-full md:h-max bg-sand-200 dark:bg-blue-200 hover:bg-white  dark:hover:bg-white hover:brightness-100 duration-300 brightness-95">
+									<Image className="rounded-md mix-blend-multiply" src={require("@/public/b.png")} alt="" layout="responsive" objectFit="cover" />
+								</figure>
+							</motion.div>
+						</InView>
+						<InView variants={fadeUpContainerVariant} className="grid grid-cols-12">
+							<div className="flex flex-col gap-4 justify-between md:col-start-7 md:col-end-[-1] col-span-full row-start-1 z-[2]">
+								<div className="text-right">
+									<motion.p variants={fadeUpItemVariant} className="text-blue-700 dark:text-blue-600">
+										Featured Project
+									</motion.p>
+									<motion.p variants={fadeUpItemVariant} className="font-medium text-2xl">
+										Payroll Management System
+									</motion.p>
 								</div>
-								<div className="h-full row-start-3 row-end-5 rounded-sm">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eum illo, saepe dolorum nihil praesentium beatae sunt alias labore, quidem vel
-									temporibus eligendi quisquam excepturi eaque quod neque quas recusandae.
-								</div>
+								<motion.div variants={fadeUpItemVariant} className="text-sm md:bg-blue-600 md:dark:bg-sea-green-500 text-white font-light p-4 rounded-md">
+									A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information
+									about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.
+								</motion.div>
+								<motion.p variants={fadeUpItemVariant} className="text-right mb-5 text-blue-700 dark:text-blue-600">
+									React , JAVA Springboot
+								</motion.p>
 							</div>
-							<div className="hidden lg:block h-80 col-start-6 col-end-13 row-start-2 row-end-5 w-full">
-								<img className="rounded-md object-cover h-full w-full" src="https://source.unsplash.com/random/1920x1080" alt="" />
-							</div>
-						</div>
+							<motion.div variants={fadeUpItemVariant} className="md:col-end-8 col-span-full row-start-1">
+								<figure className="rounded-md h-full md:h-max bg-sand-200 dark:bg-blue-200 hover:bg-white  dark:hover:bg-white hover:brightness-100 duration-300 brightness-95">
+									<Image className="rounded-md mix-blend-multiply" src={require("@/public/a.png")} alt="" layout="responsive" objectFit="cover" />
+								</figure>
+							</motion.div>
+						</InView>
 					</div>
 				</section>
 				<section id="contact" className={`min-h-screen`}>
