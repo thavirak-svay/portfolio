@@ -4,8 +4,8 @@ export const menu = [
 		name: "Home",
 	},
 	{
-		id: "resume",
-		name: "Resume",
+		id: "project",
+		name: "Project",
 	},
 	{
 		id: "contact",

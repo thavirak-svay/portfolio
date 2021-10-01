@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 import { FaTelegramPlane } from "react-icons/fa";
 import { TiSocialFacebook, TiSocialTwitter } from "react-icons/ti";
 
-import { sidebarVariant } from "@/utils/framerMotionAnimation";
+import { sidebar } from "@/utils/framerMotionAnimation";
 
 export default function LeftSidebar() {
 	return (
-		<motion.div variants={sidebarVariant} initial="initial" animate="animate" className="fixed left-10 bottom-0 md:block hidden">
+		<motion.div variants={sidebar} initial="initial" animate="animate" className="fixed left-10 bottom-0 md:block hidden">
 			<ul className="flex h-full overflow-hidden flex-col gap-6 pt-2 items-center">
 				<li className="hoverable-social-media">
 					<TiSocialFacebook size="1.8rem" />
