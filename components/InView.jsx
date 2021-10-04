@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 export default function InViewSection({ variants, ...props }) {
 	const controls = useAnimation();
 	const [ref, inView] = useInView({
-		threshold: 0.7,
+		threshold: 0.3,
 	});
 
 	useEffect(() => {

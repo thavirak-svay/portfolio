@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { SiSpring, SiReact, SiRedux, SiBootstrap } from "react-icons/si";
 import Tippy from "@tippyjs/react";
-import { AnimatePresence } from "framer-motion";
 
 import Nav from "@/components/Nav";
 import CustomLink from "@/components/CustomLink";
@@ -21,42 +20,29 @@ export default function Index() {
 			<motion.div variants={container} initial="initial" animate="animate" className={`flex flex-col w-full justify-center`}>
 				<section id="home" className={`flex justify-center items-center min-h-screen relative`}>
 					<div className="lg:px-[20%] px-[12%] ">
-						<div className="pb-6">
-							<article>
-								<motion.h3 variants={fadeUp} className="md:mb-2 font-light">
-									👋Hi! Nice to see you
-								</motion.h3>
-								<motion.h1 variants={fadeUp} className="mb-2">
-									My name is{" "}
-									<span className="relative w-max group">
-										<span className="text-blue-700 dark:text-blue-600">Svay Thavirak</span>
-										<span className="absolute -bottom-0.5 group-hover:w-full left-0 w-0 transition-all h-1 bg-gray-800 dark:bg-white" />
-									</span>
-								</motion.h1>
-								<motion.p variants={fadeUp} className="dark:text-light">
-									I&apos;m a hard working and a quick learner student at SETEC Institute. Currently, I&apos;m fascinated in Frontend Development and UI & UX design.
-								</motion.p>
-							</article>
-						</div>
-						<div className="py-6">
-							<article>
-								<motion.h3 variants={fadeUp} className="mb-2 font-light ">
-									Current Favorite Tech Stack
-								</motion.h3>
-								<motion.div variants={fadeUp}>
-									<TechStack />
-								</motion.div>
-							</article>
-						</div>
-
-						<motion.h3
-							initial={{ y: -20 }}
-							animate={{ y: 0 }}
-							transition={{ ease: "easeIn", duration: 0.5, repeat: Infinity, repeatType: "reverse" }}
-							className="absolute bottom-5 text-center mx-auto left-[50%]"
-						>
-							<a href="#project">👇</a>
-						</motion.h3>
+						<article className="pb-6">
+							<motion.h3 variants={fadeUp} className="md:mb-2 font-light">
+								👋Hi! Nice to see you
+							</motion.h3>
+							<motion.h1 variants={fadeUp} className="mb-2">
+								My name is{" "}
+								<span className="relative w-max group">
+									<span className="text-blue-700 dark:text-blue-600">Svay Thavirak</span>
+									<span className="absolute -bottom-0.5 group-hover:w-full left-0 w-0 transition-all h-1 bg-gray-800 dark:bg-white" />
+								</span>
+							</motion.h1>
+							<motion.p variants={fadeUp} className="dark:text-light">
+								I&apos;m a hard working and a quick learner student at SETEC Institute. Currently, I&apos;m fascinated in Frontend Development and UI & UX design.
+							</motion.p>
+						</article>
+						<article className="py-6">
+							<motion.h3 variants={fadeUp} className="mb-2 font-light ">
+								Current Favorite Tech Stack
+							</motion.h3>
+							<motion.div variants={fadeUp}>
+								<TechStack />
+							</motion.div>
+						</article>
 					</div>
 				</section>
 				<section id="project" className={`min-h-screen`}>

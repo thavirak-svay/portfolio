@@ -29,12 +29,14 @@ export default function Nav() {
 
 	return (
 		<Disclosure>
-			{({ open }) => (
+			{({ open, close }) => (
 				<>
 					<header
 						id="navbar"
-						className={`fixed w-full border-b-2 ${y !== 0 ? "border-gray-800 dark:border-gray-50" : "border-transparent dark:border-transparent"}  dark:border-gray-50 z-20 ${
-							previousY >= y || y === 0 ? "top-0" : "top-[-70px]"
+						className={`fixed w-full border-b-2 ${
+							y !== 0 ? "border-gray-800 dark:border-gray-50" : "border-transparent dark:border-transparent"
+						}  dark:border-gray-50 z-20 top-0 ${
+							previousY >= y || y === 0 ? "md:top-0" : "md:top-[-70px]"
 						} transition-all h-[60px] md:h-[70px] bg-sand-200 dark:bg-sea-green-700`}
 					>
 						<motion.div variants={mobileNavbarContainer} initial="initial" animate="animate" className="flex md:hidden justify-between h-full items-center mx-4">
@@ -110,7 +112,7 @@ export default function Nav() {
 								className="flex flex-col bg-sand-200 w-full md:hidden border-b-2 border-blue-700 dark:border-gray-50 dark:bg-sea-green-700 justify-between uppercase text-sm font-medium tracking-wider gap-3 px-8 py-2"
 							>
 								{menu.map(({ id, name }) => (
-									<motion.div key={id} variants={mobileNavbarItem} className="flex items-center group">
+									<motion.div key={id} variants={mobileNavbarItem} className="flex items-center group" onClick={close}>
 										<span
 											className={`rounded-[50%] group-hover:bg-blue-600 dark:group-hover:bg-blue-700 w-1 h-1 transition duration-200 ${
 												active === id ? "bg-blue-700 dark:bg-blue-600" : ""
