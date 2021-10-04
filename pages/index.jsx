@@ -19,13 +19,13 @@ export default function Index() {
 				<section id="home" className={`flex justify-center items-center min-h-screen`}>
 					<div className="lg:px-[20%] px-[12%] ">
 						<article className="pb-6">
-							<motion.h3 variants={fadeUp} className="md:mb-2 font-light">
+							<motion.h2 variants={fadeUp} className="font-light">
 								{greeting[0]()}
-							</motion.h3>
-							<motion.h1 variants={fadeUp} className="mb-2">
+							</motion.h2>
+							<motion.h1 variants={fadeUp} className="my-2">
 								{greeting[1]()}
 							</motion.h1>
-							<motion.p variants={fadeUp} className="dark:text-light">
+							<motion.p className="font-light" variants={fadeUp}>
 								{greeting[2]()}
 							</motion.p>
 						</article>
@@ -49,7 +49,7 @@ export default function Index() {
 				<section id="contact" className={`min-h-screen`}>
 					<div className="lg:pt-[10%] lg:px-[20%] pt-[25%] px-[12%]">
 						<h1 className="">
-							My name is <span className="text-blue-700 dark:text-blue-600">Svay Thavirak</span>
+							My name is <span className="text-blue-700 dark:text-cyan-500">Svay Thavirak</span>
 						</h1>
 					</div>
 				</section>

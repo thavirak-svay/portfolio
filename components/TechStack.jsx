@@ -9,9 +9,9 @@ export default function TechStack() {
 					key={i}
 					animation="scale-subtle"
 					interactive={true}
-					content={<span className="inline-block p-2 bg-sand-100 dark:bg-sea-green-500 rounded-md shadow-md dark:bg-dark border-thin">{tech[0]()}</span>}
+					content={<span className="inline-block p-2 bg-sand-100 dark:bg-darkBlue-500 ring-1 ring-blue-700 dark:ring-cyan-500 rounded-md shadow-md dark:bg-dark">{tech[0]()}</span>}
 				>
-					<button className="rounded-sm md:w-12">{tech[1]()}</button>
+					<button className="w-10 h-10 md:w-12 md:h-12 hover:text-blue-700 dark:hover:text-cyan-500 ">{tech[1]()}</button>
 				</Tippy>
 			))}
 		</div>

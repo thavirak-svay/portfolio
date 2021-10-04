@@ -39,7 +39,7 @@ html {
 }
 
 body {
-	@apply font-body relative text-gray-800 dark:text-white bg-sand-200 dark:bg-sea-green-700 transition;
+	@apply font-body relative text-gray-800 dark:text-white bg-sand-200 dark:bg-darkBlue-500 transition;
 }
 
 h1 {
@@ -58,6 +58,9 @@ h4 {
 	@apply text-lg font-semibold md:text-xl font-heading;
 }
 
-.hoverable-social-media {
-	@apply text-gray-800 dark:text-gray-50 hover:-translate-y-1 transition-transform duration-300 hover:text-blue-700 dark:hover:text-blue-600;
+.custom-svg {
+	@apply fill-current h-full w-full;
+}
+.custom-fill {
+	@apply fill-current text-sand-200 dark:text-darkBlue-800;
 }
