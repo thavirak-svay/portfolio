@@ -6,7 +6,7 @@ import { HiX, HiMenu } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { useWindowScroll, usePrevious } from "react-use";
 
-import { menu } from "@/data/menu";
+import { menu } from "@/data";
 import { lightDarkToggle, navbarItem, navbarContainer, mobileNavbarContainer, mobileNavbarItem } from "@/utils/framerMotionAnimation";
 
 export default function Nav() {

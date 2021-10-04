@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { FaTelegramPlane } from "react-icons/fa";
 import { TiSocialFacebook, TiSocialTwitter } from "react-icons/ti";
-
 import { sidebar } from "@/utils/framerMotionAnimation";
 
 export default function LeftSidebar() {
