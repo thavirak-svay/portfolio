@@ -33,9 +33,7 @@ export default function Nav() {
 				<>
 					<header
 						id="navbar"
-						className={`fixed w-full border-b-2 ${
-							y !== 0 ? "border-gray-800 dark:border-gray-50" : "border-transparent dark:border-transparent"
-						}  dark:border-gray-50 z-20 top-0 ${
+						className={`fixed w-full border-b-2 ${y !== 0 ? "border-gray-800 dark:border-white" : "border-transparent dark:border-transparent"} z-20 top-0 ${
 							previousY >= y || y === 0 ? "md:top-0" : "md:top-[-70px]"
 						} transition-all h-[60px] md:h-[70px] bg-sand-200 dark:bg-darkBlue-500`}
 					>
@@ -102,12 +100,12 @@ export default function Nav() {
 						</motion.div>
 					</header>
 					{y >= 0 && (
-						<Disclosure.Panel className={`fixed w-full z-30 top-[60px] bg-sand-200 dark:bg-darkBlue-700 transition-all `}>
+						<Disclosure.Panel className={`fixed w-full z-30 top-[60px] bg-sand-200 dark:bg-darkBlue-500 transition-all `}>
 							<motion.div
 								variants={navbarContainer}
 								initial="initial"
 								animate="animate"
-								className="flex flex-col bg-sand-200 w-full md:hidden border-b-2 border-blue-700 dark:border-gray-50 dark:bg-darkBlue-700 justify-between uppercase text-sm font-medium tracking-wider gap-3 px-8 py-2"
+								className="flex flex-col bg-sand-200 w-full md:hidden border-b-2 border-blue-700 dark:border-cyan-500 dark:bg-darkBlue-500 justify-between uppercase text-sm font-medium tracking-wider gap-3 px-8 py-2"
 							>
 								{menu.map(({ id, name }) => (
 									<motion.div key={id} variants={mobileNavbarItem} className="flex items-center group" onClick={close}>

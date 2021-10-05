@@ -16,7 +16,7 @@ export default function ProjectCard({ title, description, tectStacks, imageSrc, 
 						{title}
 					</motion.p>
 				</div>
-				<motion.div variants={fadeUp} className="text-sm md:bg-sand-300 md:dark:bg-darkBlue-500 text-current font-light p-2 md:p-4 rounded-md">
+				<motion.div variants={fadeUp} className="text-sm md:bg-sand-300 md:dark:bg-darkBlue-600 text-current font-light p-2 md:p-4 rounded-md">
 					{description}
 				</motion.div>
 
@@ -26,16 +26,20 @@ export default function ProjectCard({ title, description, tectStacks, imageSrc, 
 							key={name}
 							animation="scale-subtle"
 							interactive={true}
-							content={<span className="p-2 bg-sand-100 dark:bg-darkBlue-500 rounded-md dark:bg-dark ring-1 ring-blue-700 dark:ring-cyan-500">{name}</span>}
+							content={
+								<span className="inline-block p-2 bg-sand-100 dark:text-white dark:bg-darkBlue-500 ring-1 ring-blue-700 dark:ring-cyan-500 rounded-md shadow-md dark:bg-dark">
+									{name}
+								</span>
+							}
 						>
-							<button className="hover:text-blue-700 dark:hover:text-cyan-500">{icon}</button>
+							<button className="dark:text-white hover:text-blue-700 dark:hover:text-cyan-500">{icon}</button>
 						</Tippy>
 					))}
 				</motion.div>
 			</div>
 
 			<motion.div variants={fadeUp} className={`col-span-full row-start-1 ${alignRight ? "md:col-end-8" : "md:col-start-6 md:col-end-[-1]"}`}>
-				<figure className="brightness-90 dark:brightness-50 dark:opacity-50 opacity-10 sm:bg-gray-200 sm:dark:bg-darkBlue-300  md:brightness-100 md:dark:brightness-100 md:opacity-100 rounded-md min-h-full md:min-h-[17em] hover:bg-white dark:hover:bg-white duration-300">
+				<figure className="brightness-90 dark:brightness-50 dark:opacity-50 opacity-10 sm:bg-gray-200 sm:dark:bg-darkBlue-300 md:brightness-100 md:dark:brightness-100 md:opacity-100 md:dark:opacity-90 rounded-md min-h-full md:min-h-[17em] hover:bg-white dark:hover:bg-white duration-300">
 					<Image className="rounded-md mix-blend-multiply object-cover" src={imageSrc} alt="" layout="fill" />
 				</figure>
 			</motion.div>
