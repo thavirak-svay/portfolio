@@ -21,16 +21,16 @@ export const menu = [
 ];
 
 export const greeting = [
-	() => "👋Hi! Nice to see you",
+	() => "👋 Hi! My name is",
 	() => (
 		<>
-			My name is <CustomLink name="Svay Thavirak" />
+			<CustomLink name="Svay Thavirak." />
 		</>
 	),
 	() => (
 		<>
-			I&apos;m a hard-working and a quick learner student at <CustomLink href="https://www.setecu.com/" name="SETEC Institute" />. Currently, I&apos;m fascinated in Frontend Development
-			and UI & UX design.
+			I&apos;m a hard-working and a quick learner student at <CustomLink href="https://www.setecu.com/" name="SETEC Institute" />. Currently,&nbsp;I&apos;m&nbsp;interested&nbsp;in&nbsp;
+			<CustomLink name="frontend development" /> and <CustomLink name="UI & UX design" />.
 		</>
 	),
 ];
@@ -38,7 +38,7 @@ export const greeting = [
 export const socialMedia = [
 	{
 		icon: <TiSocialFacebook size="1.8rem" />,
-		href: "https://www.facebook.com/",
+		href: "https://www.facebook.com/thaavirak",
 	},
 	{
 		icon: <TiSocialTwitter size="1.4rem" />,
@@ -134,6 +134,33 @@ export const projects = [
 		description:
 			"A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
 		imageSrc: require("@/public/a.png"),
+		tectStacks: [
+			{
+				name: "Create React App",
+				icon: <SiReact size="1.5rem" />,
+			},
+			{
+				name: "Redux Thunk",
+				icon: <SiRedux size="1.5rem" />,
+			},
+			{
+				name: "React Bootstrap",
+				icon: <SiBootstrap size="1.5rem" />,
+			},
+			{
+				name: "Spring Boot",
+				icon: <SiSpring size="1.5rem" />,
+			},
+		],
+		challenge:
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum mollitia dicta ea quam vitae neque dolores modi rerum quia fugit cumque sequi, quos consequuntur vero esse voluptatibus optio harum rem.m",
+		solution: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum mollitia dicta ea quam vitae neque dolores modi rerum quia fugit cumque sequi, quos consequuntur vero esse voluptatibus optio harum rem.m",
+	},
+	{
+		title: "GPS Tracking System",
+		description:
+			"A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
+		imageSrc: require("@/public/b.png"),
 		tectStacks: [
 			{
 				name: "Create React App",

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { FiMoon, FiSun } from "react-icons/fi";
 import { useTheme } from "next-themes";
-import { Menu, Transition } from "@headlessui/react";
+import { Menu } from "@headlessui/react";
 import { HiX, HiMenu } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { useWindowScroll, usePrevious } from "react-use";
@@ -31,16 +31,17 @@ export default function Nav() {
 		<Menu
 			as="header"
 			id="navbar"
-			className={`fixed w-full border-b-2 ${y !== 0 ? "border-gray-800 dark:border-white" : "border-transparent dark:border-transparent"} z-20 top-0 ${
-				previousY >= y || y === 0 ? "top-0" : "top-[-70px]"
-			} transition-all h-[60px] md:h-[70px] bg-sand-200 dark:bg-darkBlue-500`}
+			style={{ transitionProperty: "top,border-color" }}
+			className={`fixed w-full border-b-2 h-[60px] duration-300 md:h-[70px] bg-sand-200 dark:bg-darkBlue-500 ${
+				y !== 0 ? "border-gray-800 dark:border-white" : "border-transparent dark:border-transparent"
+			} z-20 top-0 ${previousY >= y || y === 0 ? "md:top-0" : "md:top-[-70px]"} `}
 		>
 			{({ open }) => (
 				<>
 					<motion.div variants={mobileNavbarContainer} initial="initial" animate="animate" className="flex md:hidden justify-between h-full items-center mx-4">
 						<motion.div variants={navbarItem}>
 							<Menu.Button className="inline-flex items-center justify-center p-2 rounded-md text-blue-700 hover:text-white hover:bg-blue-700 dark:text-white dark:hover:text-gray-800 dark:hover:bg-cyan-500">
-								{open && previousY >= y ? <HiX size={18} aria-hidden="true" /> : <HiMenu size={18} aria-hidden="true" />}
+								{open ? <HiX size={18} aria-hidden="true" /> : <HiMenu size={18} aria-hidden="true" />}
 							</Menu.Button>
 						</motion.div>
 						<motion.button
@@ -60,7 +61,7 @@ export default function Nav() {
 						</motion.button>
 					</motion.div>
 
-					<motion.div variants={navbarContainer} className={`fixed w-full z-30 ${previousY <= y ? "top-[-150px]" : "top-[60px]"}  bg-sand-200 dark:bg-darkBlue-500 duration-100`}>
+					<motion.div className={`fixed w-full z-30 top-[60px] bg-sand-200 dark:bg-darkBlue-500`}>
 						<Menu.Items>
 							<motion.div
 								variants={navbarContainer}
@@ -72,7 +73,7 @@ export default function Nav() {
 									<Menu.Item key={id}>
 										<motion.div variants={mobileNavbarItem} className="flex items-center group">
 											<span
-												className={`rounded-[50%] group-hover:bg-blue-700 dark:group-hover:bg-cyan-500 w-1 h-1 transition duration-200 ${
+												className={`rounded-[50%] group-hover:bg-blue-700 dark:group-hover:bg-cyan-500 w-1 h-1 ${
 													active === id ? "bg-blue-700 dark:bg-cyan-500" : ""
 												}`}
 											/>
@@ -100,9 +101,7 @@ export default function Nav() {
 						{menu.map(({ id, name }) => (
 							<motion.div key={id} variants={navbarItem} className="flex flex-col items-center group">
 								<span
-									className={`rounded-[50%] group-hover:bg-blue-700 dark:group-hover:bg-cyan-500  w-1 h-1 transition duration-200 ${
-										active === id ? "bg-blue-700 dark:bg-cyan-500" : ""
-									}`}
+									className={`rounded-[50%] group-hover:bg-blue-700 dark:group-hover:bg-cyan-500  w-1 h-1 ${active === id ? "bg-blue-700 dark:bg-cyan-500" : ""}`}
 								/>
 
 								<a

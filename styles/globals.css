@@ -39,23 +39,26 @@ html {
 }
 
 body {
-	@apply font-body relative text-gray-800 dark:text-white bg-sand-200 dark:bg-darkBlue-500 transition;
+	@apply font-body relative text-gray-800 dark:text-gray-300 bg-sand-200 dark:bg-darkBlue-500 transition;
 }
 
 h1 {
-	@apply text-3xl font-semibold md:text-5xl font-heading;
+	@apply text-4xl font-semibold md:text-6xl font-heading;
 }
 
 h2 {
-	@apply text-2xl font-semibold md:text-4xl font-heading;
+	@apply text-3xl font-semibold md:text-4xl font-heading;
 }
 
 h3 {
-	@apply text-xl font-semibold md:text-3xl font-heading;
+	@apply text-2xl font-semibold md:text-3xl font-heading;
 }
 
 h4 {
-	@apply text-lg font-semibold md:text-xl font-heading;
+	@apply text-xl font-semibold md:text-2xl font-heading;
+}
+h5 {
+	@apply text-lg font-normal md:text-xl font-body;
 }
 
 .custom-svg {
@@ -63,4 +66,7 @@ h4 {
 }
 .custom-fill {
 	@apply fill-current text-sand-200 dark:text-darkBlue-800;
+}
+.outline-button {
+	@apply px-6 py-3 text-blue-700 ring-2 ring-blue-700 transition hover:bg-blue-700 hover:bg-opacity-20 dark:text-cyan-500 dark:hover:bg-opacity-20 dark:ring-cyan-500 dark:hover:bg-cyan-500 rounded-sm;
 }
