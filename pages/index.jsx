@@ -1,19 +1,21 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 
+import Seo from "@/components/Seo";
 import Nav from "@/components/Nav";
-import LeftSidebar from "@/components/LeftSidebar";
-import Footer from "@/components/Footer";
-import RightSidebar from "@/components/RightSidebar";
 import InView from "@/components/InView";
+import Footer from "@/components/Footer";
+import TechStack from "@/components/TechStack";
 import ProjectCard from "@/components/ProjectCard";
+import LeftSidebar from "@/components/LeftSidebar";
+import RightSidebar from "@/components/RightSidebar";
+
 import { greeting, projects, email, cvUrl } from "@/data";
 import { container, fadeUp, inView } from "@/utils/framerMotionAnimation";
-import TechStack from "@/components/TechStack";
-
 export default function Index() {
 	return (
 		<>
+			<Seo />
 			<Nav />
 			<LeftSidebar />
 			<motion.div variants={container} initial="initial" animate="animate" className={`flex flex-col w-full justify-center`}>
@@ -45,10 +47,10 @@ export default function Index() {
 					<h2>Get In Touch</h2>
 					<h5>Currently, I’m looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!</h5>
 					<div className="space-x-4">
-						<a className="outline-button" href={`mailto:${email}`}>
+						<a name="sayHello" className="outline-button" href={`mailto:${email}`}>
 							Say Hello
 						</a>
-						<a className="outline-button" href={cvUrl} target="_blank" rel="noreferrer">
+						<a name="resume" className="outline-button" href={cvUrl} target="_blank" rel="noreferrer">
 							Résumé
 						</a>
 					</div>

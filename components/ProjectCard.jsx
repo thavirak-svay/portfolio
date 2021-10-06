@@ -32,7 +32,9 @@ export default function ProjectCard({ title, description, tectStacks, imageSrc, 
 								</span>
 							}
 						>
-							<button className="hover:text-blue-700 dark:hover:text-cyan-500">{icon}</button>
+							<button name={name} className="hover:text-blue-700 dark:hover:text-cyan-500">
+								{icon}
+							</button>
 						</Tippy>
 					))}
 				</motion.div>
