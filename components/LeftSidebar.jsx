@@ -8,7 +8,7 @@ export default function LeftSidebar() {
 			<ul className="flex h-full overflow-hidden flex-col gap-6 pt-2 items-center">
 				{socialMedia.map(({ icon, href }) => (
 					<li key={href} className="hover:-translate-y-1 transition-transform duration-300 hover:text-blue-700 dark:hover:text-cyan-500">
-						<a name="href" target="_blank" rel="noreferrer" href={href}>
+						<a aria-label="href" target="_blank" rel="noreferrer" href={href}>
 							{icon}
 						</a>
 					</li>

@@ -41,7 +41,7 @@ export default function Nav() {
 					<motion.div variants={mobileNavbarContainer} initial="initial" animate="animate" className="flex md:hidden justify-between h-full items-center mx-4">
 						<motion.div variants={navbarItem}>
 							<Menu.Button
-								name="lightDarkToggle"
+								aria-label="lightDarkToggle"
 								className="inline-flex items-center justify-center p-2 rounded-md text-blue-700 hover:text-gray-300 hover:bg-blue-700 dark:text-gray-300 dark:hover:text-gray-800 dark:hover:bg-cyan-500"
 							>
 								{open ? <HiX size={18} aria-hidden="true" /> : <HiMenu size={18} aria-hidden="true" />}
@@ -81,9 +81,9 @@ export default function Nav() {
 												}`}
 											/>
 											<a
-												name={name}
+												aria-label={name}
 												href={`#${id}`}
-												className={`ml-5 group-hover:text-blue-700 dark:group-hover:text-cyan-500  py-2   ${
+												className={`ml-5 group-hover:text-blue-700  dark:group-hover:text-cyan-500  py-2   ${
 													active === id ? "text-blue-700 dark:text-cyan-500" : ""
 												}`}
 											>
@@ -109,6 +109,7 @@ export default function Nav() {
 								/>
 
 								<a
+									aria-label={name}
 									href={`#${id}`}
 									className={` group-hover:text-blue-700 dark:group-hover:text-cyan-500 py-2 ${active === id ? "text-blue-700 dark:text-cyan-500" : ""}`}
 								>

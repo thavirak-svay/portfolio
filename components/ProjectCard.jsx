@@ -9,7 +9,7 @@ export default function ProjectCard({ title, description, tectStacks, imageSrc, 
 		<div className="grid grid-cols-12 ">
 			<div className={`flex flex-col gap-4 justify-between col-span-full z-[2] row-start-1 p-5 md:p-0 ${alignRight ? "md:col-start-7 md:col-end-[-1]" : "md:col-end-7"} `}>
 				<div className={`${alignRight ? "md:text-right" : "md:text-left"}`}>
-					<motion.p variants={fadeUp} className="text-blue-700 dark:text-cyan-500">
+					<motion.p variants={fadeUp} className="text-blue-700 dark:text-cyan-500 tracking-wide">
 						Featured Project
 					</motion.p>
 					<motion.p variants={fadeUp} className="font-semibold text-2xl">
@@ -32,7 +32,7 @@ export default function ProjectCard({ title, description, tectStacks, imageSrc, 
 								</span>
 							}
 						>
-							<button name={name} className="hover:text-blue-700 dark:hover:text-cyan-500">
+							<button aria-label={name} className="hover:text-blue-700 dark:hover:text-cyan-500">
 								{icon}
 							</button>
 						</Tippy>
@@ -49,14 +49,14 @@ export default function ProjectCard({ title, description, tectStacks, imageSrc, 
 			<motion.div variants={fadeUp} className="col-span-12 md:col-span-6 flex py-4">
 				<p className="bg-sand-300 dark:bg-darkBlue-600 text-2xl p-5 rounded-3xl h-[max-content]">🧐</p>
 				<blockquote className="p-5">
-					<p className="text-2xl pb-5">Challenge</p>
+					<p className="text-2xl pb-5 tracking-wide">Challenge</p>
 					<p>{challenge}</p>
 				</blockquote>
 			</motion.div>
 			<motion.div variants={fadeUp} className="col-span-12 md:col-span-6 flex py-4">
 				<p className="bg-sand-300 dark:bg-darkBlue-600 text-2xl p-5 rounded-3xl h-[max-content]">🙌</p>
 				<blockquote className="p-5">
-					<p className="text-2xl pb-5">Solution</p>
+					<p className="text-2xl pb-5 tracking-wide">Solution</p>
 					<p>{solution}</p>
 				</blockquote>
 			</motion.div>
