@@ -41,13 +41,14 @@ export default function Nav() {
 					<motion.div variants={mobileNavbarContainer} initial="initial" animate="animate" className="flex md:hidden justify-between h-full items-center mx-4">
 						<motion.div variants={navbarItem}>
 							<Menu.Button
-								aria-label="lightDarkToggle"
+								aria-label="menuToggle"
 								className="inline-flex items-center justify-center p-2 rounded-md text-blue-700 hover:text-gray-300 hover:bg-blue-700 dark:text-gray-300 dark:hover:text-gray-800 dark:hover:bg-cyan-500"
 							>
 								{open ? <HiX size={18} aria-hidden="true" /> : <HiMenu size={18} aria-hidden="true" />}
 							</Menu.Button>
 						</motion.div>
 						<motion.button
+							aria-label="lightDarkToggle"
 							variants={navbarItem}
 							className="p-2 rounded-md text-blue-700 hover:text-gray-300 hover:bg-blue-700 dark:text-gray-300 dark:hover:text-gray-800 dark:hover:bg-cyan-500"
 							onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
