@@ -33,20 +33,20 @@ export default function Nav() {
 			id="navbar"
 			style={{ transitionProperty: "top,border-color" }}
 			className={`fixed w-full border-b-2 h-[60px] duration-300 md:h-[70px] bg-sand-200 dark:bg-darkBlue-500 ${
-				y !== 0 ? "border-gray-800 dark:border-white" : "border-transparent dark:border-transparent"
+				y !== 0 ? "border-gray-800 dark:border-gray-300" : "border-transparent dark:border-transparent"
 			} z-20 top-0 ${previousY >= y || y === 0 ? "md:top-0" : "md:top-[-70px]"} `}
 		>
 			{({ open }) => (
 				<>
 					<motion.div variants={mobileNavbarContainer} initial="initial" animate="animate" className="flex md:hidden justify-between h-full items-center mx-4">
 						<motion.div variants={navbarItem}>
-							<Menu.Button className="inline-flex items-center justify-center p-2 rounded-md text-blue-700 hover:text-white hover:bg-blue-700 dark:text-white dark:hover:text-gray-800 dark:hover:bg-cyan-500">
+							<Menu.Button className="inline-flex items-center justify-center p-2 rounded-md text-blue-700 hover:text-gray-300 hover:bg-blue-700 dark:text-gray-300 dark:hover:text-gray-800 dark:hover:bg-cyan-500">
 								{open ? <HiX size={18} aria-hidden="true" /> : <HiMenu size={18} aria-hidden="true" />}
 							</Menu.Button>
 						</motion.div>
 						<motion.button
 							variants={navbarItem}
-							className="p-2 rounded-md text-blue-700 hover:text-white hover:bg-blue-700 dark:text-white dark:hover:text-gray-800 dark:hover:bg-cyan-500"
+							className="p-2 rounded-md text-blue-700 hover:text-gray-300 hover:bg-blue-700 dark:text-gray-300 dark:hover:text-gray-800 dark:hover:bg-cyan-500"
 							onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
 						>
 							{theme === "light" ? (
@@ -113,7 +113,7 @@ export default function Nav() {
 							</motion.div>
 						))}
 						<button
-							className="absolute right-10 inline-flex items-center justify-center p-2 rounded-md text-blue-700 hover:text-white hover:bg-blue-700 dark:text-white dark:hover:text-gray-800 dark:hover:bg-cyan-500"
+							className="absolute right-10 inline-flex items-center justify-center p-2 rounded-md text-blue-700 hover:text-gray-300 hover:bg-blue-700 dark:text-gray-300 dark:hover:text-gray-800 dark:hover:bg-cyan-500"
 							onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
 						>
 							{theme === "light" ? (

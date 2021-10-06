@@ -1,7 +1,8 @@
 import CustomLink from "@/components/CustomLink";
 import { TiSocialFacebook, TiSocialTwitter } from "react-icons/ti";
 import { FaTelegramPlane } from "react-icons/fa";
-import { SiSpring, SiReact, SiRedux, SiBootstrap, SiNextdotjs, SiTailwindcss, SiNodedotjs } from "react-icons/si";
+import { SiSpring, SiReact, SiRedux, SiBootstrap, SiNextdotjs, SiTailwindcss, SiNodedotjs, SiGithub } from "react-icons/si";
+import { RiGithubLine, RiFacebookCircleLine, RiTwitterLine, RiTelegramLine } from "react-icons/ri";
 
 export const defaultTheme = "dark";
 
@@ -37,15 +38,19 @@ export const greeting = [
 
 export const socialMedia = [
 	{
-		icon: <TiSocialFacebook size="1.8rem" />,
+		icon: <RiGithubLine size="1.5rem" />,
+		href: "https://github.com/ThavirakSvay",
+	},
+	{
+		icon: <RiFacebookCircleLine size="1.5rem" />,
 		href: "https://www.facebook.com/thaavirak",
 	},
 	{
-		icon: <TiSocialTwitter size="1.4rem" />,
+		icon: <RiTwitterLine size="1.5rem" />,
 		href: "https://twitter.com/thavirak_svay",
 	},
 	{
-		icon: <FaTelegramPlane size="1.2rem" />,
+		icon: <RiTelegramLine size="1.5rem" />,
 		href: "https://t.me/thaa_virak",
 	},
 ];
@@ -211,3 +216,5 @@ export const projects = [
 		solution: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum mollitia dicta ea quam vitae neque dolores modi rerum quia fugit cumque sequi, quos consequuntur vero esse voluptatibus optio harum rem.m",
 	},
 ];
+
+export const cvUrl = "https://drive.google.com/file/d/1nrRJUhFaDZCSzrz2Yfe5igM2OBsuSDjc/view?usp=sharing";

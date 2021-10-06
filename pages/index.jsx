@@ -3,10 +3,11 @@ import { motion } from "framer-motion";
 
 import Nav from "@/components/Nav";
 import LeftSidebar from "@/components/LeftSidebar";
+import Footer from "@/components/Footer";
 import RightSidebar from "@/components/RightSidebar";
 import InView from "@/components/InView";
 import ProjectCard from "@/components/ProjectCard";
-import { greeting, projects, email } from "@/data";
+import { greeting, projects, email, cvUrl } from "@/data";
 import { container, fadeUp, inView } from "@/utils/framerMotionAnimation";
 import TechStack from "@/components/TechStack";
 
@@ -47,10 +48,11 @@ export default function Index() {
 						<a className="outline-button" href={`mailto:${email}`}>
 							Say Hello
 						</a>
-						<a className="outline-button" href="https://drive.google.com/file/d/1nrRJUhFaDZCSzrz2Yfe5igM2OBsuSDjc/view?usp=sharing" target="_blank" rel="noreferrer">
-							Resume
+						<a className="outline-button" href={cvUrl} target="_blank" rel="noreferrer">
+							Résumé
 						</a>
 					</div>
+					<Footer />
 				</section>
 			</motion.div>
 			<RightSidebar />
