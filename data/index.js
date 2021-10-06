@@ -78,7 +78,7 @@ export const favoriteTechStacks = {
 	tailwindcss: [
 		() => (
 			<p>
-				<CustomLink href="https://tailwindcss.com" name="Tailwind CSS" />, an utility-first CSS framework is such a breeze to work with the more I use it the more I like it.
+				<CustomLink href="https://tailwindcss.com" name="Tailwind CSS" />, an utility-first CSS framework is such a breeze to work with, the more I use it the more I like it.
 			</p>
 		),
 		() => <SiTailwindcss className="w-full h-full" />,

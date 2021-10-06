@@ -32,7 +32,7 @@ export default function Nav() {
 			as="header"
 			id="navbar"
 			style={{ transitionProperty: "top,border-color" }}
-			className={`fixed w-full border-b-2 h-[60px] duration-300 md:h-[70px] bg-sand-200 dark:bg-darkBlue-500 ${
+			className={`fixed w-full border-b-2 h-[60px] md:duration-300 md:h-[70px] bg-sand-200 dark:bg-darkBlue-500 ${
 				y !== 0 ? "border-gray-800 dark:border-gray-300" : "border-transparent dark:border-transparent"
 			} z-20 top-0 ${previousY >= y || y === 0 ? "md:top-0" : "md:top-[-70px]"} `}
 		>
