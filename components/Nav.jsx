@@ -71,7 +71,7 @@ export default function Nav() {
 								variants={navbarContainer}
 								initial="initial"
 								animate="animate"
-								className="flex flex-col bg-sand-200 w-full md:hidden border-b-2 border-blue-700 dark:border-cyan-500 dark:bg-darkBlue-500 justify-between uppercase text-sm font-medium tracking-wider gap-3 px-8 py-2"
+								className="flex flex-col bg-sand-200 w-full md:hidden border-b-2 border-blue-700 dark:border-cyan-500 dark:bg-darkBlue-500 justify-between uppercase text-sm font-medium tracking-wider space-y-3 px-8 py-2"
 							>
 								{menu.map(({ id, name }) => (
 									<Menu.Item key={id}>

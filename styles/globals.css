@@ -49,26 +49,6 @@ html {
 body {
 	@apply font-body relative text-gray-800 dark:text-gray-300 bg-sand-200 dark:bg-darkBlue-500 transition-all;
 }
-
-.h1 {
-	@apply text-4xl md:text-6xl;
-}
-
-.h2 {
-	@apply text-3xl md:text-4xl;
-}
-
-.h3 {
-	@apply text-2xl md:text-3xl;
-}
-
-.h4 {
-	@apply text-xl md:text-2xl;
-}
-.h5 {
-	@apply text-lg md:text-xl;
-}
-
 .custom-svg {
 	@apply fill-current h-full w-full;
 }

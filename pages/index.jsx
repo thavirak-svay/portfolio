@@ -19,24 +19,28 @@ export default function Index() {
 			<Nav />
 			<LeftSidebar />
 			<motion.div variants={container} initial="initial" animate="animate" className={`flex flex-col w-full justify-center`}>
-				<section id="home" className={`flex flex-col space-y-4 justify-center min-h-screen lg:mx-[20%] md:mx-[15%] mx-[12%]`}>
-					<motion.p variants={fadeUp} className="h3">
-						{greeting[0]()}
-					</motion.p>
-					<motion.p variants={fadeUp} className="h1 font-semibold">
-						{greeting[1]()}
-					</motion.p>
+				<section id="home" className={`flex flex-col space-y-8 md:space-y-6 justify-center min-h-screen lg:mx-[20%] md:mx-[15%] mx-[12%]`}>
+					<span>
+						<motion.p variants={fadeUp} className="text-xl md:text-2xl">
+							{greeting[0]()}
+						</motion.p>
+						<motion.p variants={fadeUp} className="text-4xl md:text-7xl font-semibold">
+							{greeting[1]()}
+						</motion.p>
+					</span>
 
-					<motion.p className="h5 py-2 md:py-4" variants={fadeUp}>
+					<motion.p className="py-2 md:py-4 md:text-lg md:w-4/6" variants={fadeUp}>
 						{greeting[2]()}
 					</motion.p>
 
-					<motion.p variants={fadeUp} className="h3">
-						Current&nbsp;Favorite&nbsp;Tech&nbsp;Stack
-					</motion.p>
-					<motion.div variants={fadeUp}>
-						<TechStack />
-					</motion.div>
+					<span>
+						<motion.p variants={fadeUp} className="text-xl md:text-2xl">
+							Current&nbsp;Favorite&nbsp;Tech&nbsp;Stack
+						</motion.p>
+						<motion.div variants={fadeUp}>
+							<TechStack />
+						</motion.div>
+					</span>
 				</section>
 				<section id="project" className={`min-h-screen lg:px-[20%] md:px-[15%] px-[4%]`}>
 					{projects.map(({ ...props }, i) => (
@@ -47,10 +51,10 @@ export default function Index() {
 				</section>
 				<section id="contact" className={`min-h-screen flex items-center lg:px-[20%] md:px-[15%] px-[4%]`}>
 					<InView variants={inView} className="flex flex-col space-y-20 justify-center items-center text-center">
-						<motion.p variants={fadeUp} className="h2 font-semibold tracking-wide text-blue-700 dark:text-cyan-500">
+						<motion.p variants={fadeUp} className="text-2xl md:text-4xl font-semibold tracking-wide text-blue-700 dark:text-cyan-500">
 							Get In Touch
 						</motion.p>
-						<motion.p variants={fadeUp} className="h5">
+						<motion.p variants={fadeUp} className="md:text-lg">
 							Currently, I’m looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to
 							you!
 						</motion.p>

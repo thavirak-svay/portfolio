@@ -30,8 +30,8 @@ export const greeting = [
 	),
 	() => (
 		<>
-			I&apos;m a hard-working and a quick learner student at <CustomLink href="https://www.setecu.com/" name="SETEC Institute" />. Currently,&nbsp;I&apos;m&nbsp;interested&nbsp;in&nbsp;
-			<CustomLink name="frontend development" /> and <CustomLink name="UI & UX design" />.
+			I&apos;m a hard-working and a quick learner student at <CustomLink href="https://www.setecu.com/" name="SETEC&nbsp;Institute" />. Currently, I&apos;m interested in{" "}
+			<CustomLink name="frontend&nbsp;development" /> and <CustomLink name="UI&nbsp;&&nbsp;UX&nbsp;design" />.
 		</>
 	),
 ];
