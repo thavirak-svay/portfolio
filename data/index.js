@@ -1,7 +1,5 @@
 import CustomLink from "@/components/CustomLink";
-import { TiSocialFacebook, TiSocialTwitter } from "react-icons/ti";
-import { FaTelegramPlane } from "react-icons/fa";
-import { SiSpring, SiReact, SiRedux, SiBootstrap, SiNextdotjs, SiTailwindcss, SiNodedotjs, SiGithub } from "react-icons/si";
+import { SiSpring, SiReact, SiRedux, SiBootstrap, SiNextdotjs, SiTailwindcss, SiNodedotjs } from "react-icons/si";
 import { RiGithubLine, RiFacebookCircleLine, RiTwitterLine, RiTelegramLine } from "react-icons/ri";
 
 export const defaultTheme = "dark";
