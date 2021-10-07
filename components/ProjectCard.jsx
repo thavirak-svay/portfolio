@@ -41,7 +41,7 @@ export default function ProjectCard({ title, description, tectStacks, imageSrc, 
 			</div>
 
 			<motion.div variants={fadeUp} className={`col-span-full row-start-1 ${alignRight ? "md:col-end-8" : "md:col-start-6 md:col-end-[-1]"}`}>
-				<figure className="relative brightness-125 dark:brightness-50 dark:opacity-25 opacity-[0.15] rounded-md bg-blue-500 dark:bg-cyan-400 md:bg-blue-200 md:brightness-90 md:dark:brightness-100 md:opacity-100 md:dark:opacity-70  min-h-full md:min-h-[17em] hover:bg-white hover:brightness-100 dark:hover:bg-white dark:hover:opacity-100 duration-300">
+				<figure className="relative brightness-100 dark:brightness-50 dark:opacity-25 opacity-[0.15] rounded-md bg-blue-300 dark:bg-cyan-400 md:bg-blue-200 md:brightness-90 md:dark:brightness-100 md:opacity-100 md:dark:opacity-70  min-h-full md:min-h-[17em] hover:bg-white hover:brightness-100 dark:hover:bg-white dark:hover:opacity-100 duration-300">
 					<Image className="rounded-md mix-blend-multiply object-cover" src={imageSrc} alt="" layout="fill" />
 				</figure>
 			</motion.div>
