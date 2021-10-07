@@ -54,7 +54,7 @@ export default function Index() {
 							Currently, I’m looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to
 							you!
 						</motion.p>
-						<motion.div variants={fadeUp} className="space-x-4">
+						<motion.div variants={fadeUp} className="space-x-4 flex">
 							<a aria-label="sayHello" className="outline-button" href={`mailto:${email}`}>
 								Say Hello
 							</a>

@@ -41,20 +41,20 @@ export default function ProjectCard({ title, description, tectStacks, imageSrc, 
 			</div>
 
 			<motion.div variants={fadeUp} className={`col-span-full row-start-1 ${alignRight ? "md:col-end-8" : "md:col-start-6 md:col-end-[-1]"}`}>
-				<figure className="brightness-100 dark:brightness-50 dark:opacity-25 opacity-20 rounded-md bg-blue-400  dark:bg-cyan-400 md:bg-blue-200 md:brightness-90 md:dark:brightness-100 md:opacity-100 md:dark:opacity-70  min-h-full md:min-h-[17em] hover:bg-white hover:brightness-100 dark:hover:bg-white dark:hover:opacity-100 duration-300 ">
-					<Image className="rounded-md mix-blend-multiply object-cover " src={imageSrc} alt="" layout="fill" />
+				<figure className="brightness-125 dark:brightness-50 dark:opacity-25 opacity-25 rounded-md bg-blue-600  dark:bg-cyan-400 md:bg-blue-200 md:brightness-90 md:dark:brightness-100 md:opacity-100 md:dark:opacity-70  min-h-full md:min-h-[17em] hover:bg-white hover:brightness-100 dark:hover:bg-white dark:hover:opacity-100 duration-300">
+					<Image className="rounded-md mix-blend-multiply object-cover" src={imageSrc} alt="" layout="fill" />
 				</figure>
 			</motion.div>
 
 			<motion.div variants={fadeUp} className="col-span-12 md:col-span-6 flex gap-5 py-4">
-				<p className="bg-sand-300 dark:bg-darkBlue-600 text-xl p-4 rounded-2xl h-[max-content]">🧐</p>
+				<p className="bg-sand-300 dark:bg-darkBlue-400 text-xl p-4 rounded-2xl h-[max-content]">🧐</p>
 				<blockquote>
 					<p className="text-xl py-4 tracking-wide text-blue-700 dark:text-cyan-500">Challenge</p>
 					<p className="opacity-80">{challenge}</p>
 				</blockquote>
 			</motion.div>
 			<motion.div variants={fadeUp} className="col-span-12 md:col-span-6 flex gap-5 py-4">
-				<p className="bg-sand-300 dark:bg-darkBlue-600 text-xl p-4 rounded-2xl h-[max-content]">🙌</p>
+				<p className="bg-sand-300 dark:bg-darkBlue-400 text-xl p-4 rounded-2xl h-[max-content]">🙌</p>
 				<blockquote>
 					<p className="text-xl py-4 tracking-wide text-blue-700 dark:text-cyan-500">Solution</p>
 					<p className="opacity-80">{solution}</p>

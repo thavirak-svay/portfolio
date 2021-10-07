@@ -34,6 +34,14 @@
 		font-display: swap;
 	}
 }
+@layer utilities {
+	.vertical-lr {
+		writing-mode: vertical-lr;
+	}
+	.vertical-rl {
+		writing-mode: vertical-lr;
+	}
+}
 html {
 	scroll-behavior: smooth;
 }
@@ -68,5 +76,5 @@ body {
 	@apply fill-current text-sand-200 dark:text-darkBlue-800;
 }
 .outline-button {
-	@apply px-6 py-3 text-blue-700 ring-2 ring-blue-700 transition hover:bg-blue-700 hover:bg-opacity-20 dark:text-cyan-500 dark:hover:bg-opacity-20 dark:ring-cyan-500 dark:hover:bg-cyan-500 rounded-sm;
+	@apply px-6 block min-w-[12ch] py-3 text-blue-700 ring-2 ring-blue-700 transition hover:bg-blue-700 hover:bg-opacity-20 dark:text-cyan-500 dark:hover:bg-opacity-20 dark:ring-cyan-500 dark:hover:bg-cyan-500 rounded-sm;
 }
