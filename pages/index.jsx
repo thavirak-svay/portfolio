@@ -45,20 +45,27 @@ export default function Index() {
 						</InView>
 					))}
 				</section>
-				<section id="contact" className={`flex flex-col space-y-20  justify-center items-center min-h-screen lg:px-[20%] md:px-[15%] px-[4%] text-center`}>
-					<p className="h2 font-semibold tracking-wide">Get In Touch</p>
-					<p className="h5">
-						Currently, I’m looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
-					</p>
-					<div className="space-x-4">
-						<a aria-label="sayHello" className="outline-button" href={`mailto:${email}`}>
-							Say Hello
-						</a>
-						<a aria-label="resume" className="outline-button" href={cvUrl} target="_blank" rel="noreferrer">
-							Résumé
-						</a>
-					</div>
-					<Footer />
+				<section id="contact" className={`min-h-screen flex items-center lg:px-[20%] md:px-[15%] px-[4%]`}>
+					<InView variants={inView} className="flex flex-col space-y-20 justify-center items-center text-center">
+						<motion.p variants={fadeUp} className="h2 font-semibold tracking-wide text-blue-700 dark:text-cyan-500">
+							Get In Touch
+						</motion.p>
+						<motion.p variants={fadeUp} className="h5">
+							Currently, I’m looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to
+							you!
+						</motion.p>
+						<motion.div variants={fadeUp} className="space-x-4">
+							<a aria-label="sayHello" className="outline-button" href={`mailto:${email}`}>
+								Say Hello
+							</a>
+							<a aria-label="resume" className="outline-button" href={cvUrl} target="_blank" rel="noreferrer">
+								Résumé
+							</a>
+						</motion.div>
+						<motion.div variants={fadeUp}>
+							<Footer />
+						</motion.div>
+					</InView>
 				</section>
 			</motion.div>
 			<RightSidebar />
