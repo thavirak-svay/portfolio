@@ -40,7 +40,7 @@ export const container = {
 		},
 	},
 };
-export const inView = {
+export const staggerChildren = {
 	initial: {},
 	animate: {
 		transition: {
@@ -74,5 +74,12 @@ export const sidebar = {
 			delay: 1.5,
 			ease: "easeOut",
 		},
+	},
+};
+
+export const noAnimation = {
+	initial: {},
+	animate: {
+		opacity: 1,
 	},
 };

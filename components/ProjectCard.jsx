@@ -1,5 +1,4 @@
 import Image from "next/image";
-import InView from "./InView";
 import Tippy from "@tippyjs/react";
 import { motion } from "framer-motion";
 import { fadeUp } from "@/utils/framerMotionAnimation";
@@ -7,8 +6,12 @@ import { fadeUp } from "@/utils/framerMotionAnimation";
 export default function ProjectCard({ title, description, tectStacks, imageSrc, challenge, solution, alignRight = false }) {
 	return (
 		<div className="grid grid-cols-12 ">
-			<div className={`flex flex-col space-y-4 justify-between col-span-full z-[2] row-start-1 p-5 md:p-0 ${alignRight ? "md:col-start-7 md:col-end-[-1]" : "md:col-end-7"}`}>
-				<div className={`${alignRight ? "md:text-right" : "md:text-left"}`}>
+			<div
+				className={`flex flex-col space-y-4 justify-between col-span-full z-[2] row-start-1 p-5 md:p-0 ${
+					alignRight ? "md:col-start-7 md:col-end-[-1] md:text-right" : "md:col-end-7 md:text-left"
+				}`}
+			>
+				<div>
 					<motion.p variants={fadeUp} className="text-blue-700 dark:text-cyan-500 tracking-wide">
 						Featured Project
 					</motion.p>
@@ -16,7 +19,7 @@ export default function ProjectCard({ title, description, tectStacks, imageSrc, 
 						{title}
 					</motion.p>
 				</div>
-				<motion.div variants={fadeUp} className={`md:bg-sand-300 md:dark:bg-darkBlue-400 rounded-md ${alignRight ? "md:text-right" : "md:text-left"}`}>
+				<motion.div variants={fadeUp} className={`md:bg-sand-300 md:dark:bg-darkBlue-400 rounded-md`}>
 					<p className={`text-sm p-0.5 md:p-4 text-current`}>{description}</p>
 				</motion.div>
 

@@ -1,5 +1,6 @@
 import * as React from "react";
 import { motion } from "framer-motion";
+import { useMedia } from "react-use";
 
 import Seo from "@/components/Seo";
 import Nav from "@/components/Nav";
@@ -11,8 +12,9 @@ import LeftSidebar from "@/components/LeftSidebar";
 import RightSidebar from "@/components/RightSidebar";
 
 import { greeting, projects, email, cvUrl } from "@/data";
-import { container, fadeUp, inView } from "@/utils/framerMotionAnimation";
+import { container, fadeUp, staggerChildren } from "@/utils/framerMotionAnimation";
 export default function Index() {
+	const isMobile = useMedia("(max-width: 768px)");
 	return (
 		<>
 			<Seo />
@@ -44,13 +46,13 @@ export default function Index() {
 				</section>
 				<section id="project" className={`min-h-screen lg:px-[20%] md:px-[15%] px-[4%]`}>
 					{projects.map(({ ...props }, i) => (
-						<InView key={i} variants={inView} className="lg:pt-[6%] md:py-[8%] py-[20%] ">
+						<InView key={i} variants={isMobile ? fadeUp : staggerChildren} className="lg:pt-[6%] md:py-[8%] py-[20%] ">
 							<ProjectCard alignRight={i % 2 === 0} {...props} />
 						</InView>
 					))}
 				</section>
 				<section id="contact" className={`min-h-screen flex items-center lg:px-[20%] md:px-[15%] px-[4%]`}>
-					<InView variants={inView} className="flex flex-col space-y-20 justify-center items-center text-center">
+					<InView variants={staggerChildren} className="flex flex-col space-y-20 justify-center items-center text-center">
 						<motion.p variants={fadeUp} className="text-2xl md:text-4xl font-semibold tracking-wide text-blue-700 dark:text-cyan-500">
 							Get In Touch
 						</motion.p>
