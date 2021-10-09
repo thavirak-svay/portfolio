@@ -27,6 +27,8 @@ const ChakraUIIcon = (
 	</svg>
 );
 export const defaultTheme = "dark";
+export const email = "thaavirak@gmail.com";
+export const cvUrl = "https://drive.google.com/file/d/1_JGQZCuH-EsCaAyjtN0Y-RDzr2NXMOJ2/view?usp=sharing";
 
 export const menu = [
 	{
@@ -76,8 +78,6 @@ export const socialMedia = [
 		href: "https://t.me/thaa_virak",
 	},
 ];
-
-export const email = "thaavirak@gmail.com";
 
 export const favoriteTechStacks = {
 	react: [
@@ -215,5 +215,3 @@ export const projects = [
 		solution: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum mollitia dicta ea quam vitae neque dolores modi rerum quia fugit cumque sequi, quos consequuntur vero esse voluptatibus optio harum rem.m",
 	},
 ];
-
-export const cvUrl = "https://drive.google.com/file/d/1nrRJUhFaDZCSzrz2Yfe5igM2OBsuSDjc/view?usp=sharing";
