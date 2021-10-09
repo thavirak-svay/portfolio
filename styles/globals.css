@@ -42,12 +42,12 @@
 		writing-mode: vertical-lr;
 	}
 }
+
 html {
 	scroll-behavior: smooth;
 }
-
 body {
-	@apply font-body relative text-gray-800 dark:text-gray-300 bg-sand-200 dark:bg-darkBlue-500 transition-all;
+	@apply font-body relative text-gray-800 dark:text-gray-300 bg-sand-200 dark:bg-darkBlue-500;
 }
 .custom-svg {
 	@apply fill-current h-full w-full;

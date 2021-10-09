@@ -11,14 +11,10 @@ export default function ProjectCard({ title, description, tectStacks, imageSrc, 
 					alignRight ? "md:col-start-7 md:col-end-[-1] md:text-right" : "md:col-end-7 md:text-left"
 				}`}
 			>
-				<div>
-					<motion.p variants={fadeUp} className="text-blue-700 dark:text-cyan-500 tracking-wide">
-						Featured Project
-					</motion.p>
-					<motion.p variants={fadeUp} className="font-semibold text-xl md:text-2xl hover:text-blue-700 dark:hover:text-cyan-500">
-						{title}
-					</motion.p>
-				</div>
+				<motion.div variants={fadeUp}>
+					<p className="text-blue-700 dark:text-cyan-500 tracking-wide">Featured Project</p>
+					<p className="font-semibold text-xl md:text-2xl hover:text-blue-700 dark:hover:text-cyan-500">{title}</p>
+				</motion.div>
 				<motion.div variants={fadeUp} className={`md:bg-sand-300 md:dark:bg-darkBlue-400 rounded-md`}>
 					<p className={`text-sm p-0.5 md:p-4 text-current`}>{description}</p>
 				</motion.div>
@@ -35,7 +31,7 @@ export default function ProjectCard({ title, description, tectStacks, imageSrc, 
 								</span>
 							}
 						>
-							<button aria-label={name} className="hover:text-blue-700 dark:hover:text-cyan-500">
+							<button aria-label={name} className="w-6 h-6 hover:text-blue-700 dark:hover:text-cyan-500">
 								{icon}
 							</button>
 						</Tippy>
