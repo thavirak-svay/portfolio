@@ -28,7 +28,7 @@ const ChakraUIIcon = (
 );
 export const defaultTheme = "dark";
 export const email = "thaavirak@gmail.com";
-export const cvUrl = "https://drive.google.com/file/d/1_JGQZCuH-EsCaAyjtN0Y-RDzr2NXMOJ2/view?usp=sharing";
+export const cvUrl = "https://drive.google.com/file/d/1apihTYBEk1S0cQR_iYkH2Wb-kyO6xWuU/view?usp=sharing";
 
 export const menu = [
 	{
