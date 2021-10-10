@@ -1,11 +1,12 @@
-import "../styles/globals.css";
-import "tippy.js/animations/scale-subtle.css";
-
+import { useEffect } from "react";
 import Script from "next/script";
-import { ThemeProvider } from "next-themes";
 import { defaultTheme } from "@/data";
 import { useRouter } from "next/router";
+import { ThemeProvider } from "next-themes";
 import * as gtag from "@/libs/gtag";
+
+import "../styles/globals.css";
+import "tippy.js/animations/scale-subtle.css";
 
 const App = ({ Component, pageProps }) => {
 	const router = useRouter();
