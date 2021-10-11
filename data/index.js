@@ -1,5 +1,5 @@
 import CustomLink from "@/components/CustomLink";
-import { SiSpring, SiReact, SiRedux, SiBootstrap, SiNextdotjs, SiTailwindcss, SiNodedotjs } from "react-icons/si";
+import { SiSpringboot, SiReact, SiRedux, SiBootstrap, SiNextdotjs, SiTailwindcss, SiNodedotjs } from "react-icons/si";
 import { RiGithubLine, RiFacebookCircleLine, RiTwitterLine, RiTelegramLine } from "react-icons/ri";
 
 const ReactQueryIcon = (
@@ -154,7 +154,7 @@ export const projects = [
 			},
 			{
 				name: "Spring Boot",
-				icon: <SiSpring className="w-full h-full" />,
+				icon: <SiSpringboot className="w-full h-full" />,
 			},
 		],
 		challenge:
@@ -181,7 +181,7 @@ export const projects = [
 			},
 			{
 				name: "Spring Boot",
-				icon: <SiSpring className="w-full h-full" />,
+				icon: <SiSpringboot className="w-full h-full" />,
 			},
 		],
 		challenge: "Opting out of Redux, means there is no longer a global state in our React App to consume data from WebSockets.",
@@ -207,7 +207,7 @@ export const projects = [
 			},
 			{
 				name: "Spring Boot",
-				icon: <SiSpring size="1.5rem" />,
+				icon: <SiSpringboot size="1.5rem" />,
 			},
 		],
 		challenge:
