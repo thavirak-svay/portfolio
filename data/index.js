@@ -28,7 +28,7 @@ const ChakraUIIcon = (
 );
 export const defaultTheme = "dark";
 export const email = "thaavirak@gmail.com";
-export const cvUrl = "https://drive.google.com/file/d/1apihTYBEk1S0cQR_iYkH2Wb-kyO6xWuU/view?usp=sharing";
+export const cvUrl = "https://drive.google.com/file/d/1KgGGpLr0-9FYLjvcJDTqOcy5PvrxpLfM/view?usp=sharing";
 
 export const menu = [
 	{
@@ -55,7 +55,7 @@ export const greeting = [
 	() => (
 		<>
 			I&apos;m a hard-working and quick learner student at <CustomLink href="https://www.setecu.com/" name="SETEC&nbsp;Institute" />. Currently, I&apos;m interested in{" "}
-			<CustomLink name="frontend&nbsp;development" /> and <CustomLink name="UI&nbsp;&&nbsp;UX&nbsp;design" />.
+			<CustomLink name="front-end&nbsp;development" /> and <CustomLink name="UI&nbsp;&&nbsp;UX&nbsp;design" />.
 		</>
 	),
 ];
@@ -83,7 +83,7 @@ export const favoriteTechStacks = {
 	react: [
 		() => (
 			<p>
-				<CustomLink href="https://reactjs.org" name="Create React App" />, where I started my frontend development journey, great for building an authenticated website.
+				<CustomLink href="https://reactjs.org" name="Create React App" />, where I started my front-end development journey, great for building an authenticated website.
 			</p>
 		),
 		() => <SiReact className="w-full h-full" />,
