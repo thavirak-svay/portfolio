@@ -187,31 +187,4 @@ export const projects = [
 		challenge: "Opting out of Redux, means there is no longer a global state in our React App to consume data from WebSockets.",
 		solution: "Thanks to React Query, we can easily modify the cached data and broadcast new data across the app without having to re-fetch queries.",
 	},
-	{
-		title: "Payroll Management System",
-		description:
-			"A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
-		imageSrc: require("@/public/a.png"),
-		tectStacks: [
-			{
-				name: "Create React App",
-				icon: <SiReact size="1.5rem" />,
-			},
-			{
-				name: "Redux Thunk",
-				icon: <SiRedux size="1.5rem" />,
-			},
-			{
-				name: "React Bootstrap",
-				icon: <SiBootstrap size="1.5rem" />,
-			},
-			{
-				name: "Spring Boot",
-				icon: <SiSpringboot size="1.5rem" />,
-			},
-		],
-		challenge:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum mollitia dicta ea quam vitae neque dolores modi rerum quia fugit cumque sequi, quos consequuntur vero esse voluptatibus optio harum rem.m",
-		solution: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum mollitia dicta ea quam vitae neque dolores modi rerum quia fugit cumque sequi, quos consequuntur vero esse voluptatibus optio harum rem.m",
-	},
 ];
