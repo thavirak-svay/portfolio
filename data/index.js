@@ -1,6 +1,6 @@
 import CustomLink from "@/components/CustomLink";
 import { SiSpringboot, SiReact, SiRedux, SiBootstrap, SiNextdotjs, SiTailwindcss, SiNodedotjs } from "react-icons/si";
-import { RiGithubLine, RiFacebookCircleLine, RiTwitterLine, RiTelegramLine } from "react-icons/ri";
+import { RiGithubLine, RiFacebookCircleLine, RiTelegramLine, RiLinkedinBoxLine } from "react-icons/ri";
 
 const ReactQueryIcon = (
 	<svg className="custom-svg" viewBox="0 0 24 22">
@@ -70,8 +70,8 @@ export const socialMedia = [
 		href: "https://www.facebook.com/thaavirak",
 	},
 	{
-		icon: <RiTwitterLine size="1.5rem" />,
-		href: "https://twitter.com/thavirak_svay",
+		icon: <RiLinkedinBoxLine size="1.5rem" />,
+		href: "https://www.linkedin.com/in/thavirak-svay-089714186/",
 	},
 	{
 		icon: <RiTelegramLine size="1.5rem" />,
