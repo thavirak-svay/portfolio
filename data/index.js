@@ -71,7 +71,7 @@ export const socialMedia = [
 	},
 	{
 		icon: <RiLinkedinBoxLine size="1.5rem" />,
-		href: "https://www.linkedin.com/in/thavirak-svay-089714186/",
+		href: "https://www.linkedin.com/in/thavirak-svay/",
 	},
 	{
 		icon: <RiTelegramLine size="1.5rem" />,
