@@ -46,7 +46,7 @@ export const menu = [
 ];
 
 export const greeting = [
-	() => "👋 Hi! My name is",
+	() => "My name is",
 	() => (
 		<>
 			<CustomLink name="Svay Thavirak." />
