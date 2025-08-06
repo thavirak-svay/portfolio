@@ -12,7 +12,7 @@ import ProjectCard from "@/components/ProjectCard";
 import LeftSidebar from "@/components/LeftSidebar";
 import RightSidebar from "@/components/RightSidebar";
 
-import { greeting, projects, email, cvUrl } from "@/data";
+import { greeting, projects, email, cvUrl, experience, contactCta } from "@/data";
 import { container, fadeUp, staggerChildren } from "@/utils/framerMotionAnimation";
 export default function Index() {
 	const isMobile = useMedia("(max-width: 768px)");
@@ -49,14 +49,29 @@ export default function Index() {
 
 								<span>
 									<motion.p variants={fadeUp} className="text-xl md:text-2xl">
-										Current&nbsp;Favorite&nbsp;Tech&nbsp;Stack
+										Skills & Expertise
 									</motion.p>
 									<motion.div variants={fadeUp}>
 										<TechStack />
 									</motion.div>
 								</span>
 							</section>
-
+							<section id="experience" className="min-h-[40vh] lg:px-[20%] md:px-[15%] px-[4%] py-8">
+								<motion.p variants={fadeUp} className="text-xl md:text-2xl font-semibold mb-4 text-blue-700 dark:text-cyan-500">Experience</motion.p>
+								<motion.div variants={fadeUp} className="space-y-6">
+									{experience.map((exp, i) => (
+										<div key={i} className="bg-sand-200 dark:bg-darkBlue-500 rounded-lg p-4 shadow-md">
+											<div className="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+												<span className="font-semibold text-blue-700 dark:text-cyan-400">{exp.title}</span>
+												<span className="text-xs text-gray-500 dark:text-gray-300">{exp.company} | {exp.period}</span>
+											</div>
+											<ul className="list-disc ml-5 text-xs opacity-90">
+												{exp.achievements.map((a, j) => <li key={j}>{a}</li>)}
+											</ul>
+										</div>
+									))}
+								</motion.div>
+							</section>
 							<section id="project" className={`min-h-screen lg:px-[20%] md:px-[15%] px-[4%]`}>
 								{projects.map(({ ...props }, i) => (
 									<InView key={i} variants={isMobile ? fadeUp : staggerChildren} className="lg:pt-[6%] md:py-[8%] py-[20%] ">
@@ -70,8 +85,7 @@ export default function Index() {
 										Get In Touch
 									</motion.p>
 									<motion.p variants={fadeUp} className="md:text-lg">
-										Currently, I’m looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best
-										to get back to you!
+										{contactCta}
 									</motion.p>
 									<motion.div variants={fadeUp} className="space-x-4 flex">
 										<a aria-label="sayHello" className="outline-button" href={`mailto:${email}`}>

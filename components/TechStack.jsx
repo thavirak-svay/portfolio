@@ -1,20 +1,20 @@
-import Tippy from "@tippyjs/react";
-import { favoriteTechStacks } from "@/data";
+import { skills } from "@/data";
 
 export default function TechStack() {
 	return (
-		<div className="flex mt-2 space-x-3 md:space-x-6">
-			{Object.values(favoriteTechStacks).map((tech, i) => (
-				<Tippy
-					key={i}
-					animation="scale-subtle"
-					interactive={true}
-					content={<span className="inline-block p-2 bg-sand-200 dark:bg-darkBlue-500 ring-1 ring-blue-700 dark:ring-cyan-500 rounded-md shadow-md dark:bg-dark">{tech[0]()}</span>}
-				>
-					<button aria-label="techstacks" className="w-8 h-8 md:w-10 md:h-10 hover:text-blue-700 dark:hover:text-cyan-500">
-						{tech[1]()}
-					</button>
-				</Tippy>
+		<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
+			{skills.map((group, i) => (
+				<div key={i} className="bg-sand-200 dark:bg-darkBlue-500 rounded-lg p-4 shadow-md">
+					<p className="font-semibold text-blue-700 dark:text-cyan-500 mb-1">{group.category}</p>
+					<p className="text-xs opacity-80 mb-2">{group.description}</p>
+					<ul className="flex flex-wrap gap-2">
+						{group.items.map((item) => (
+							<li key={item} className="bg-blue-100 dark:bg-cyan-900 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded text-xs font-medium">
+								{item}
+							</li>
+						))}
+					</ul>
+				</div>
 			))}
 		</div>
 	);

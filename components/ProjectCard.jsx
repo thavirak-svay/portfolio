@@ -1,9 +1,8 @@
 import Image from "next/image";
-import Tippy from "@tippyjs/react";
 import { motion } from "framer-motion";
 import { fadeUp } from "@/utils/framerMotionAnimation";
 
-export default function ProjectCard({ title, description, tectStacks, imageSrc, challenge, solution, alignRight = false }) {
+export default function ProjectCard({ title, description, keyFeatures, techHighlights, role, impact, imageSrc, challenge, solution, alignRight = false }) {
 	return (
 		<div className="grid grid-cols-12 ">
 			<div
@@ -18,25 +17,24 @@ export default function ProjectCard({ title, description, tectStacks, imageSrc, 
 				<motion.div variants={fadeUp} className={`md:bg-sand-300 md:dark:bg-darkBlue-400 rounded-md`}>
 					<p className={`text-sm p-0.5 md:p-4 text-current`}>{description}</p>
 				</motion.div>
-
-				<motion.div variants={fadeUp} className={`flex space-x-4 text-right md:mb-5 self-end ${alignRight ? "md:self-end" : "md:self-start"}`}>
-					{tectStacks.map(({ name, icon }) => (
-						<Tippy
-							key={name}
-							animation="scale-subtle"
-							interactive={true}
-							content={
-								<span className="inline-block p-2 bg-sand-200 dark:bg-darkBlue-500 ring-1 ring-blue-700 dark:ring-cyan-500 rounded-md shadow-md dark:bg-dark">
-									{name}
-								</span>
-							}
-						>
-							<button aria-label={name} className="w-6 h-6 hover:text-blue-700 dark:hover:text-cyan-500">
-								{icon}
-							</button>
-						</Tippy>
-					))}
-				</motion.div>
+				{role && (
+					<motion.p variants={fadeUp} className="text-xs font-semibold text-blue-700 dark:text-cyan-400 mt-2">Role: {role}</motion.p>
+				)}
+				{impact && (
+					<motion.p variants={fadeUp} className="text-xs text-green-700 dark:text-green-400 mb-2">Impact: {impact}</motion.p>
+				)}
+				{keyFeatures && keyFeatures.length > 0 && (
+					<motion.ul variants={fadeUp} className="list-disc ml-5 text-xs mb-2 opacity-90">
+						{keyFeatures.map((f, i) => <li key={i}>{f}</li>)}
+					</motion.ul>
+				)}
+				{techHighlights && techHighlights.length > 0 && (
+					<motion.div variants={fadeUp} className="flex flex-wrap gap-2 mb-2">
+						{techHighlights.map((t, i) => (
+							<span key={i} className="bg-blue-100 dark:bg-cyan-900 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded text-xs font-medium">{t}</span>
+						))}
+					</motion.div>
+				)}
 			</div>
 
 			<motion.div variants={fadeUp} className={`col-span-full row-start-1 ${alignRight ? "md:col-end-8" : "md:col-start-6 md:col-end-[-1]"}`}>
@@ -45,20 +43,24 @@ export default function ProjectCard({ title, description, tectStacks, imageSrc, 
 				</figure>
 			</motion.div>
 
-			<motion.div variants={fadeUp} className="col-span-12 md:col-span-6 flex space-x-5 py-4">
-				<p className="bg-sand-300 dark:bg-darkBlue-400 text-xl p-4 rounded-2xl h-[max-content]">🧐</p>
-				<blockquote>
-					<p className="text-xl py-4 tracking-wide text-blue-700 dark:text-cyan-500">Challenge</p>
-					<p className="opacity-80">{challenge}</p>
-				</blockquote>
-			</motion.div>
-			<motion.div variants={fadeUp} className="col-span-12 md:col-span-6 flex space-x-5 py-4">
-				<p className="bg-sand-300 dark:bg-darkBlue-400 text-xl p-4 rounded-2xl h-[max-content]">🙌</p>
-				<blockquote>
-					<p className="text-xl py-4 tracking-wide text-blue-700 dark:text-cyan-500">Solution</p>
-					<p className="opacity-80">{solution}</p>
-				</blockquote>
-			</motion.div>
+			{challenge && (
+				<motion.div variants={fadeUp} className="col-span-12 md:col-span-6 flex space-x-5 py-4">
+					<p className="bg-sand-300 dark:bg-darkBlue-400 text-xl p-4 rounded-2xl h-[max-content]">🧐</p>
+					<blockquote>
+						<p className="text-xl py-4 tracking-wide text-blue-700 dark:text-cyan-500">Challenge</p>
+						<p className="opacity-80">{challenge}</p>
+					</blockquote>
+				</motion.div>
+			)}
+			{solution && (
+				<motion.div variants={fadeUp} className="col-span-12 md:col-span-6 flex space-x-5 py-4">
+					<p className="bg-sand-300 dark:bg-darkBlue-400 text-xl p-4 rounded-2xl h-[max-content]">🙌</p>
+					<blockquote>
+						<p className="text-xl py-4 tracking-wide text-blue-700 dark:text-cyan-500">Solution</p>
+						<p className="opacity-80">{solution}</p>
+					</blockquote>
+				</motion.div>
+			)}
 		</div>
 	);
 }
