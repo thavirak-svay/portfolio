@@ -305,14 +305,6 @@ export const experience = [
   }
 ];
 
-export const testimonials = [
-  {
-    name: "Sokha Chan",
-    title: "Engineering Manager, Wing Bank",
-    quote: "Thavirak is a reliable and innovative backend engineer. His leadership and technical skills were key to our platform's success."
-  }
-];
-
 export const articles = [
   // { title: "Scaling Microservices in Fintech", url: "https://..." }
 ];
