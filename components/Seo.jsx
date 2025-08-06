@@ -4,8 +4,8 @@ import { useRouter } from "next/router";
 export default function Seo(props) {
 	const router = useRouter();
 	const meta = {
-		title: "Svay Thavirak | Portfolio",
-		description: "An online portfolio by Svay Thavirak and the showcase of my works.",
+		title: "Svay Thavirak | Backend Developer",
+		description: "Backend developer specializing in Spring Boot, Java, and microservices. Building scalable, high-performance APIs and enterprise applications.",
 		image: "https://thaavirak.vercel.app/favicon.ico",
 		type: "website",
 		robots: "follow, index",
@@ -21,7 +21,7 @@ export default function Seo(props) {
 			<link rel="canonical" href={`https://thaavirak.vercel.app${router.asPath}`} />
 			{/* Open Graph */}
 			<meta property="og:type" content={meta.type} />
-			<meta property="og:site_name" content="Svay Thavirak" />
+			<meta property="og:site_name" content="Svay Thavirak - Backend Developer" />
 			<meta property="og:description" content={meta.description} />
 			<meta property="og:title" content={meta.title} />
 			<meta name="image" property="og:image" content={meta.image} />

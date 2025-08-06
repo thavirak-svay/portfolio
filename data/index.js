@@ -1,12 +1,21 @@
 import CustomLink from '@/components/CustomLink';
 import {
   SiSpringboot,
-  SiReact,
-  SiRedux,
-  SiBootstrap,
-  SiNextdotjs,
-  SiTailwindcss,
+  SiJava,
+  SiPostgresql,
+  SiMongodb,
+  SiRedis,
+  SiDocker,
+  SiKubernetes,
+  SiJenkins,
+  SiMaven,
+  SiGradle,
+  SiJunit5,
+  SiSwagger,
+  SiJwt,
   SiNodedotjs,
+  SiReact,
+  SiTailwindcss,
 } from 'react-icons/si';
 import {
   RiGithubLine,
@@ -70,9 +79,9 @@ export const greeting = [
   () => (
     <>
       <p>
-        A hard-working and quick learner web developer with proven experiences and abilities to
-        collaborate effectively with other developers. Passionate about personal growth, software
-        development, and exploring new topics.
+        A passionate backend developer with expertise in Spring Boot and Java ecosystem. I specialize in building scalable, 
+        high-performance REST APIs, microservices, and enterprise applications. Experienced in database design, 
+        cloud deployment, and DevOps practices. Committed to writing clean, maintainable code and following best practices.
       </p>
       <br />
       <div className="flex items-center">
@@ -104,120 +113,117 @@ export const socialMedia = [
 ];
 
 export const favoriteTechStacks = {
-  react: [
+  springboot: [
     () => (
       <p>
-        <CustomLink href="https://reactjs.org" name="Create React App" />, where I started my
-        front-end development journey, great for building an authenticated website.
+        <CustomLink href="https://spring.io/projects/spring-boot" name="Spring Boot" />, my primary framework for building 
+        robust, production-ready backend applications. I love its auto-configuration, embedded servers, and extensive ecosystem.
       </p>
     ),
-    () => <SiReact className="w-full h-full" />,
+    () => <SiSpringboot className="w-full h-full" />,
   ],
-  nextjs: [
+  java: [
     () => (
       <p>
-        <CustomLink href="https://nextjs.org" name="Next.js" />, I really enjoy learning Next.js
-        because of its cool features such as static site generation, dynamic paths and api route.
+        <CustomLink href="https://www.oracle.com/java/" name="Java" />, the foundation of my backend development. 
+        I enjoy its strong typing, object-oriented design, and the vast ecosystem of libraries and frameworks.
       </p>
     ),
-    () => <SiNextdotjs className="w-full h-full" />,
+    () => <SiJava className="w-full h-full" />,
   ],
-  tailwindcss: [
+  postgresql: [
     () => (
       <p>
-        <CustomLink href="https://tailwindcss.com" name="Tailwind CSS" />, an utility-first CSS
-        framework is such a breeze to work with, the more I use it the more I like it.
+        <CustomLink href="https://www.postgresql.org" name="PostgreSQL" />, my preferred relational database for its 
+        reliability, ACID compliance, and advanced features like JSON support and full-text search.
       </p>
     ),
-    () => <SiTailwindcss className="w-full h-full" />,
+    () => <SiPostgresql className="w-full h-full" />,
   ],
-  nodejs: [
+  mongodb: [
     () => (
       <p>
-        <CustomLink href="https://nodejs.org" name="Node.js" />, simple but powerful backend
-        language so you don&apos;t need to learn another language.
+        <CustomLink href="https://www.mongodb.com" name="MongoDB" />, excellent for document-based data storage and 
+        when I need flexible schema design for rapid development and scaling.
       </p>
     ),
-    () => <SiNodedotjs className="w-full h-full" />,
+    () => <SiMongodb className="w-full h-full" />,
   ],
-  chakraui: [
+  docker: [
     () => (
       <p>
-        <CustomLink href="https://chakra-ui.com" name="Chakra UI" />, a ready-to-use component
-        library, comes with all the styling benefits of Tailwind CSS that will give you an ability
-        to build a beautiful website at fast pace.
+        <CustomLink href="https://www.docker.com" name="Docker" />, essential for containerization and ensuring 
+        consistent deployment environments across development, staging, and production.
       </p>
     ),
-    () => ChakraUIIcon,
+    () => <SiDocker className="w-full h-full" />,
   ],
-  reactquery: [
+  redis: [
     () => (
       <p>
-        <CustomLink href="https://react-query.tanstack.com" name="React Query" /> from the author{' '}
-        <CustomLink href="https://github.com/tannerlinsley" name="tannerlinsley" />, great react
-        hooks for data fetching and caching, the revalidate on focus is unreal.{' '}
-        <CustomLink href="https://swr.vercel.app" name="SWR" /> is also a great alternative to this.
+        <CustomLink href="https://redis.io" name="Redis" />, perfect for caching, session management, and as an 
+        in-memory data store to improve application performance and reduce database load.
       </p>
     ),
-    () => ReactQueryIcon,
+    () => <SiRedis className="w-full h-full" />,
   ],
 };
 
 export const projects = [
   {
-    title: 'Payroll Management System',
+    title: 'E-Commerce Microservices Platform',
     description:
-      "A web app for managing employees data for enterprise companies. Add and modify employees' information, payslips, deposit & withdrawal funds, mistakes & achievements and leave requests. Print and exports reports & summaries related to payroll, employee, funding, and more.",
+      'A scalable microservices-based e-commerce platform built with Spring Boot. Features include user authentication, product catalog, order management, payment processing, and inventory tracking. Implemented with event-driven architecture using Apache Kafka for inter-service communication.',
     imageSrc: require('@/public/a.png'),
     tectStacks: [
       {
-        name: 'Create React App',
-        icon: <SiReact className="w-full h-full" />,
-      },
-      {
-        name: 'Redux Thunk',
-        icon: <SiRedux className="w-full h-full" />,
-      },
-      {
-        name: 'React Bootstrap',
-        icon: <SiBootstrap className="w-full h-full" />,
-      },
-      {
         name: 'Spring Boot',
         icon: <SiSpringboot className="w-full h-full" />,
       },
+      {
+        name: 'PostgreSQL',
+        icon: <SiPostgresql className="w-full h-full" />,
+      },
+      {
+        name: 'Redis',
+        icon: <SiRedis className="w-full h-full" />,
+      },
+      {
+        name: 'Docker',
+        icon: <SiDocker className="w-full h-full" />,
+      },
     ],
     challenge:
-      'Build tables that contain large datasets and require cells to be editable. Simply putting all the data from API into a react table library is not enough because tables become lagging as users typing and big chunks of data pile up.',
+      'Building a distributed system that maintains data consistency across multiple microservices while handling high concurrent user traffic and ensuring fault tolerance.',
     solution:
-      "I built a custom table component that is capable of performing calculations vertically and horizontally using JavaScript DOM. Since it does not use React's virtual DOM, we can avoid frequent re-rendering and significantly improve performance.",
+      'Implemented event sourcing with CQRS pattern, used distributed transactions with Saga pattern, and implemented circuit breakers for fault tolerance. Used Redis for caching and session management to improve performance.',
   },
   {
-    title: 'GPS Tracking System',
+    title: 'Real-Time Analytics API',
     description:
-      'A web app for monitoring GPS devices. Receive real-time updates of location, speed, altitude, etc. Draw zone areas and assign devices directly on the map. Pinpoint the exact location and alert the screen and Telegram whenever the device is out of the zone.',
+      'A high-performance REST API for real-time data analytics and reporting. Processes millions of data points per day, provides real-time dashboards, and supports complex aggregations. Built with Spring Boot, optimized for low latency and high throughput.',
     imageSrc: require('@/public/b.png'),
     tectStacks: [
       {
-        name: 'Create React App',
-        icon: <SiReact className="w-full h-full" />,
-      },
-      {
-        name: 'Chakra UI',
-        icon: ChakraUIIcon,
-      },
-      {
-        name: 'React Query',
-        icon: ReactQueryIcon,
-      },
-      {
         name: 'Spring Boot',
         icon: <SiSpringboot className="w-full h-full" />,
       },
+      {
+        name: 'MongoDB',
+        icon: <SiMongodb className="w-full h-full" />,
+      },
+      {
+        name: 'Redis',
+        icon: <SiRedis className="w-full h-full" />,
+      },
+      {
+        name: 'JUnit 5',
+        icon: <SiJunit5 className="w-full h-full" />,
+      },
     ],
     challenge:
-      'Opting out of Redux, means there is no longer a global state in our React App to consume data from WebSockets.',
+      'Processing and analyzing large volumes of real-time data while maintaining sub-second response times and ensuring data accuracy across distributed systems.',
     solution:
-      'Thanks to React Query, we can easily modify the cached data and broadcast new data across the app without having to re-fetch queries.',
+      'Implemented async processing with Spring WebFlux, used MongoDB aggregation pipelines for complex queries, implemented Redis caching for frequently accessed data, and used comprehensive testing with JUnit 5 and Mockito.',
   },
 ];
