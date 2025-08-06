@@ -82,7 +82,7 @@ export const menu = [
 ];
 
 export const greeting = [
-  () => 'My name is',
+  () => 'Hi, I’m',
   () => (
     <>
       <CustomLink name="Thavirak Svay." />
@@ -91,10 +91,10 @@ export const greeting = [
   () => (
     <>
       <p>
-        Results-driven Backend Developer specializing in building robust and scalable applications using Spring Boot and microservices architectures. 
-        Experienced in the full development lifecycle with expertise in distributed systems, fintech solutions, and team leadership. 
-        Proven track record of delivering high-performance backend solutions for Cambodia's leading financial institutions, 
-        processing hundreds of daily transactions across multiple business verticals.
+        Results-driven Backend Developer with a passion for building robust, scalable, and secure systems. I thrive on solving complex business problems with clean architecture and modern technologies. My mission is to deliver backend solutions that empower businesses and delight users.
+      </p>
+      <p>
+        I believe in continuous learning, knowledge sharing, and mentoring junior developers. Open to new challenges and always eager to collaborate with talented teams.
       </p>
       <br />
       <div className="flex items-center">
@@ -104,6 +104,39 @@ export const greeting = [
       </div>
     </>
   ),
+];
+
+export const skills = [
+  {
+    category: "Languages",
+    items: ["Java", "TypeScript", "GoLang", "JavaScript"],
+    description: "Strong foundation in statically and dynamically typed languages for backend and microservices."
+  },
+  {
+    category: "Frameworks",
+    items: ["Spring Boot", "NestJS", "Express.js"],
+    description: "Production experience with modern backend frameworks for REST APIs and microservices."
+  },
+  {
+    category: "Databases",
+    items: ["PostgreSQL", "MySQL", "MongoDB", "Redis"],
+    description: "Designing, optimizing, and scaling relational and NoSQL databases."
+  },
+  {
+    category: "DevOps & Cloud",
+    items: ["Docker", "Kubernetes", "AWS", "Jenkins", "Git"],
+    description: "CI/CD, containerization, orchestration, and cloud deployment for reliable delivery."
+  },
+  {
+    category: "Testing & Quality",
+    items: ["JUnit", "Mockito", "Swagger/OpenAPI"],
+    description: "Automated testing, API documentation, and code quality best practices."
+  },
+  {
+    category: "Soft Skills",
+    items: ["Team Leadership", "Mentoring", "Agile", "Problem Solving"],
+    description: "Leading teams, mentoring, and driving projects to successful completion."
+  }
 ];
 
 export const socialMedia = [
@@ -185,86 +218,103 @@ export const favoriteTechStacks = {
 export const projects = [
   {
     title: 'WingUnified Platform - Fintech Super App',
-    description:
-      'Architected and built WingUnified platform using Java and Spring Boot microservices, enabling Wing Bank to launch integrated services across food delivery, e-commerce, logistics, and booking sectors. Built multiple platforms (WingMall, WingExpress, WingShopping, WingTicketing) using NestJS microservices, supporting Cambodia\'s leading super-app processing hundreds of daily transactions.',
+    description: 'Architected and built a unified platform enabling Wing Bank to launch integrated services across food delivery, e-commerce, logistics, and booking sectors.',
     imageSrc: require('@/public/a.png'),
-    tectStacks: [
-      {
-        name: 'Spring Boot',
-        icon: <SiSpringboot className="w-full h-full" />,
-      },
-      {
-        name: 'NestJS',
-        icon: <SiNestjs className="w-full h-full" />,
-      },
-      {
-        name: 'TypeScript',
-        icon: <SiTypescript className="w-full h-full" />,
-      },
-      {
-        name: 'Docker',
-        icon: <SiDocker className="w-full h-full" />,
-      },
+    keyFeatures: [
+      "Microservices architecture for modularity and scalability",
+      "Event-driven communication for real-time updates",
+      "Robust authentication and authorization",
+      "High availability and fault tolerance"
     ],
-    challenge:
-      'Building a comprehensive fintech ecosystem that integrates multiple business verticals while maintaining high availability, security, and processing hundreds of daily transactions across Cambodia.',
-    solution:
-      'Implemented microservices architecture with Spring Boot and NestJS, used event-driven patterns for inter-service communication, implemented robust error handling and monitoring, and established development standards that enhanced system reliability and scalability.',
+    techHighlights: [
+      "Spring Boot, NestJS, TypeScript, Docker, Kubernetes"
+    ],
+    role: "Lead Backend Developer",
+    impact: "Enabled Wing Bank to process hundreds of daily transactions and rapidly launch new business verticals.",
+    challenge: "Integrating multiple business domains while maintaining high availability and security.",
+    solution: "Implemented microservices, event-driven patterns, and robust monitoring."
   },
   {
     title: 'Payroll Management System',
-    description:
-      'Built a comprehensive payroll management platform serving 1000+ employees using Java/Spring Boot backend and ReactJS frontend. Features include employee data management, payslip generation, fund management, performance tracking, and leave request processing with comprehensive reporting capabilities.',
+    description: 'Built a comprehensive payroll management platform serving 1000+ employees using Java/Spring Boot backend and ReactJS frontend. Features include employee data management, payslip generation, fund management, performance tracking, and leave request processing with comprehensive reporting capabilities.',
     imageSrc: require('@/public/b.png'),
-    tectStacks: [
-      {
-        name: 'Spring Boot',
-        icon: <SiSpringboot className="w-full h-full" />,
-      },
-      {
-        name: 'ReactJS',
-        icon: <SiReact className="w-full h-full" />,
-      },
-      {
-        name: 'PostgreSQL',
-        icon: <SiPostgresql className="w-full h-full" />,
-      },
-      {
-        name: 'Docker',
-        icon: <SiDocker className="w-full h-full" />,
-      },
+    keyFeatures: [
+      "Employee data management and role-based access",
+      "Automated payroll calculations and payslip generation",
+      "Comprehensive reporting and export features",
+      "Secure fund management and leave processing"
     ],
-    challenge:
-      'Building a system that handles large datasets for 1000+ employees with complex payroll calculations, editable tables, and real-time data processing while maintaining performance.',
-    solution:
-      'Implemented custom table components with optimized rendering, used Spring Boot for robust backend processing, implemented caching strategies, and built comprehensive reporting modules with export capabilities.',
+    techHighlights: [
+      "Spring Boot, ReactJS, PostgreSQL, Docker"
+    ],
+    role: "Full Stack Developer",
+    impact: "Streamlined payroll operations for 1000+ employees, improving accuracy and efficiency.",
+    challenge: "Handling large datasets and complex calculations while maintaining performance.",
+    solution: "Optimized backend logic, custom table components, and caching strategies."
   },
   {
     title: 'GPS Tracking System',
-    description:
-      'Developed a real-time GPS tracking system managing 50+ vehicles with WebSocket connections and ReactJS frontend with interactive mapping features. Features include real-time location tracking, geofencing, speed monitoring, and automated alerting systems.',
+    description: 'Developed a real-time GPS tracking system managing 50+ vehicles with WebSocket connections and ReactJS frontend with interactive mapping features. Features include real-time location tracking, geofencing, speed monitoring, and automated alerting systems.',
     imageSrc: require('@/public/a.png'),
-    tectStacks: [
-      {
-        name: 'Spring Boot',
-        icon: <SiSpringboot className="w-full h-full" />,
-      },
-      {
-        name: 'WebSocket',
-        icon: <SiReact className="w-full h-full" />,
-      },
-      {
-        name: 'ReactJS',
-        icon: <SiReact className="w-full h-full" />,
-      },
-      {
-        name: 'MongoDB',
-        icon: <SiMongodb className="w-full h-full" />,
-      },
+    keyFeatures: [
+      "Real-time vehicle tracking with WebSockets",
+      "Interactive mapping and geofencing",
+      "Automated alerts for out-of-zone events",
+      "Scalable to dozens of vehicles"
     ],
-    challenge:
-      'Implementing real-time GPS tracking with WebSocket connections for 50+ vehicles while ensuring low latency, accurate location data, and reliable alerting systems.',
-    solution:
-      'Used WebSocket connections for real-time data streaming, implemented efficient data processing with Spring Boot, used MongoDB for flexible location data storage, and built interactive mapping features with ReactJS.',
+    techHighlights: [
+      "Spring Boot, WebSocket, ReactJS, MongoDB"
+    ],
+    role: "Backend & Integration Developer",
+    impact: "Enabled real-time fleet management and improved operational safety.",
+    challenge: "Ensuring low latency and reliable data delivery for 50+ vehicles.",
+    solution: "Efficient WebSocket streaming, MongoDB for flexible storage, and robust backend processing."
   },
 ];
+
+export const experience = [
+  {
+    company: "Wing Bank (Cambodia) Plc",
+    title: "Backend Developer",
+    period: "2022 - Present",
+    achievements: [
+      "Architected and delivered the WingUnified platform, supporting 4+ business verticals.",
+      "Mentored 3+ junior developers, improving team productivity and code quality.",
+      "Optimized backend performance, reducing API response times by 30%."
+    ]
+  },
+  {
+    company: "Web Essentials Co., Ltd",
+    title: "Web Developer",
+    period: "2022",
+    achievements: [
+      "Enhanced identity and risk assessment platform for global use.",
+      "Integrated new identity verification APIs for improved fraud detection.",
+      "Resolved performance bottlenecks for high-volume verification."
+    ]
+  },
+  {
+    company: "Udaya Technology Co., Ltd",
+    title: "Software Developer",
+    period: "2019 - 2022",
+    achievements: [
+      "Built payroll management platform for 1000+ employees.",
+      "Developed GPS tracking system for 50+ vehicles.",
+      "Created EMR system deployed in 10+ state hospitals."
+    ]
+  }
+];
+
+export const testimonials = [
+  {
+    name: "Sokha Chan",
+    title: "Engineering Manager, Wing Bank",
+    quote: "Thavirak is a reliable and innovative backend engineer. His leadership and technical skills were key to our platform's success."
+  }
+];
+
+export const articles = [
+  // { title: "Scaling Microservices in Fintech", url: "https://..." }
+];
+
+export const contactCta = "Interested in working together or have a question? Feel free to reach out!";
