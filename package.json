@@ -1,7 +1,8 @@
 {
-  "name": "portfolio",
+  "name": "backend-developer-portfolio",
   "version": "0.1.0",
   "private": true,
+  "description": "Backend developer portfolio showcasing Spring Boot, Java, and microservices expertise",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -26,5 +27,8 @@
     "eslint-config-next": "11.1.2",
     "postcss": "^8.3.9",
     "tailwindcss": "^2.2.15"
+  },
+  "engines": {
+    "node": ">=18.0.0 <19"
   }
 }

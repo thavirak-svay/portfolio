@@ -1,12 +1,33 @@
 import CustomLink from '@/components/CustomLink';
 import {
   SiSpringboot,
-  SiReact,
-  SiRedux,
-  SiBootstrap,
-  SiNextdotjs,
-  SiTailwindcss,
+  SiJava,
+  SiPostgresql,
+  SiMongodb,
+  SiRedis,
+  SiDocker,
+  SiKubernetes,
+  SiJenkins,
+  SiMaven,
+  SiGradle,
+  SiJunit5,
+  SiSwagger,
+  SiJwt,
   SiNodedotjs,
+  SiReact,
+  SiTailwindcss,
+  SiNestjs,
+  SiTypescript,
+  SiJavascript,
+  SiGolang,
+  SiNextdotjs,
+  SiNuxtdotjs,
+  SiVuedotjs,
+  SiMysql,
+  SiFirebase,
+  SiGraphql,
+  SiAws,
+  SiGit,
 } from 'react-icons/si';
 import {
   RiGithubLine,
@@ -61,18 +82,19 @@ export const menu = [
 ];
 
 export const greeting = [
-  () => 'My name is',
+  () => 'Hi, I’m',
   () => (
     <>
-      <CustomLink name="Svay Thavirak." />
+      <CustomLink name="Thavirak Svay." />
     </>
   ),
   () => (
     <>
       <p>
-        A hard-working and quick learner web developer with proven experiences and abilities to
-        collaborate effectively with other developers. Passionate about personal growth, software
-        development, and exploring new topics.
+        Results-driven Backend Developer with a passion for building robust, scalable, and secure systems. I thrive on solving complex business problems with clean architecture and modern technologies. My mission is to deliver backend solutions that empower businesses and delight users.
+      </p>
+      <p>
+        I believe in continuous learning, knowledge sharing, and mentoring junior developers. Open to new challenges and always eager to collaborate with talented teams.
       </p>
       <br />
       <div className="flex items-center">
@@ -82,6 +104,39 @@ export const greeting = [
       </div>
     </>
   ),
+];
+
+export const skills = [
+  {
+    category: "Languages",
+    items: ["Java", "TypeScript", "GoLang", "JavaScript"],
+    description: "Strong foundation in statically and dynamically typed languages for backend and microservices."
+  },
+  {
+    category: "Frameworks",
+    items: ["Spring Boot", "NestJS", "Express.js"],
+    description: "Production experience with modern backend frameworks for REST APIs and microservices."
+  },
+  {
+    category: "Databases",
+    items: ["PostgreSQL", "MySQL", "MongoDB", "Redis"],
+    description: "Designing, optimizing, and scaling relational and NoSQL databases."
+  },
+  {
+    category: "DevOps & Cloud",
+    items: ["Docker", "Kubernetes", "AWS", "Jenkins", "Git"],
+    description: "CI/CD, containerization, orchestration, and cloud deployment for reliable delivery."
+  },
+  {
+    category: "Testing & Quality",
+    items: ["JUnit", "Mockito", "Swagger/OpenAPI"],
+    description: "Automated testing, API documentation, and code quality best practices."
+  },
+  {
+    category: "Soft Skills",
+    items: ["Team Leadership", "Mentoring", "Agile", "Problem Solving"],
+    description: "Leading teams, mentoring, and driving projects to successful completion."
+  }
 ];
 
 export const socialMedia = [
@@ -104,120 +159,154 @@ export const socialMedia = [
 ];
 
 export const favoriteTechStacks = {
-  react: [
+  springboot: [
     () => (
       <p>
-        <CustomLink href="https://reactjs.org" name="Create React App" />, where I started my
-        front-end development journey, great for building an authenticated website.
+        <CustomLink href="https://spring.io/projects/spring-boot" name="Spring Boot" />, my primary framework for building 
+        robust, production-ready backend applications. I love its auto-configuration, embedded servers, and extensive ecosystem.
       </p>
     ),
-    () => <SiReact className="w-full h-full" />,
+    () => <SiSpringboot className="w-full h-full" />,
   ],
-  nextjs: [
+  java: [
     () => (
       <p>
-        <CustomLink href="https://nextjs.org" name="Next.js" />, I really enjoy learning Next.js
-        because of its cool features such as static site generation, dynamic paths and api route.
+        <CustomLink href="https://www.oracle.com/java/" name="Java" />, the foundation of my backend development. 
+        I enjoy its strong typing, object-oriented design, and the vast ecosystem of libraries and frameworks.
       </p>
     ),
-    () => <SiNextdotjs className="w-full h-full" />,
+    () => <SiJava className="w-full h-full" />,
   ],
-  tailwindcss: [
+  nestjs: [
     () => (
       <p>
-        <CustomLink href="https://tailwindcss.com" name="Tailwind CSS" />, an utility-first CSS
-        framework is such a breeze to work with, the more I use it the more I like it.
+        <CustomLink href="https://nestjs.com" name="NestJS" />, powerful Node.js framework for building scalable server-side applications. 
+        I use it for microservices architecture with TypeScript, providing excellent structure and maintainability.
       </p>
     ),
-    () => <SiTailwindcss className="w-full h-full" />,
+    () => <SiNestjs className="w-full h-full" />,
   ],
-  nodejs: [
+  postgresql: [
     () => (
       <p>
-        <CustomLink href="https://nodejs.org" name="Node.js" />, simple but powerful backend
-        language so you don&apos;t need to learn another language.
+        <CustomLink href="https://www.postgresql.org" name="PostgreSQL" />, my preferred relational database for its 
+        reliability, ACID compliance, and advanced features like JSON support and full-text search.
       </p>
     ),
-    () => <SiNodedotjs className="w-full h-full" />,
+    () => <SiPostgresql className="w-full h-full" />,
   ],
-  chakraui: [
+  docker: [
     () => (
       <p>
-        <CustomLink href="https://chakra-ui.com" name="Chakra UI" />, a ready-to-use component
-        library, comes with all the styling benefits of Tailwind CSS that will give you an ability
-        to build a beautiful website at fast pace.
+        <CustomLink href="https://www.docker.com" name="Docker" />, essential for containerization and ensuring 
+        consistent deployment environments across development, staging, and production.
       </p>
     ),
-    () => ChakraUIIcon,
+    () => <SiDocker className="w-full h-full" />,
   ],
-  reactquery: [
+  kubernetes: [
     () => (
       <p>
-        <CustomLink href="https://react-query.tanstack.com" name="React Query" /> from the author{' '}
-        <CustomLink href="https://github.com/tannerlinsley" name="tannerlinsley" />, great react
-        hooks for data fetching and caching, the revalidate on focus is unreal.{' '}
-        <CustomLink href="https://swr.vercel.app" name="SWR" /> is also a great alternative to this.
+        <CustomLink href="https://kubernetes.io" name="Kubernetes" />, for orchestrating containerized applications 
+        and managing microservices at scale with automated deployment, scaling, and operations.
       </p>
     ),
-    () => ReactQueryIcon,
+    () => <SiKubernetes className="w-full h-full" />,
   ],
 };
 
 export const projects = [
   {
-    title: 'Payroll Management System',
-    description:
-      "A web app for managing employees data for enterprise companies. Add and modify employees' information, payslips, deposit & withdrawal funds, mistakes & achievements and leave requests. Print and exports reports & summaries related to payroll, employee, funding, and more.",
+    title: 'WingUnified Platform - Fintech Super App',
+    description: 'Architected and built a unified platform enabling Wing Bank to launch integrated services across food delivery, e-commerce, logistics, and booking sectors.',
     imageSrc: require('@/public/a.png'),
-    tectStacks: [
-      {
-        name: 'Create React App',
-        icon: <SiReact className="w-full h-full" />,
-      },
-      {
-        name: 'Redux Thunk',
-        icon: <SiRedux className="w-full h-full" />,
-      },
-      {
-        name: 'React Bootstrap',
-        icon: <SiBootstrap className="w-full h-full" />,
-      },
-      {
-        name: 'Spring Boot',
-        icon: <SiSpringboot className="w-full h-full" />,
-      },
+    keyFeatures: [
+      "Microservices architecture for modularity and scalability",
+      "Event-driven communication for real-time updates",
+      "Robust authentication and authorization",
+      "High availability and fault tolerance"
     ],
-    challenge:
-      'Build tables that contain large datasets and require cells to be editable. Simply putting all the data from API into a react table library is not enough because tables become lagging as users typing and big chunks of data pile up.',
-    solution:
-      "I built a custom table component that is capable of performing calculations vertically and horizontally using JavaScript DOM. Since it does not use React's virtual DOM, we can avoid frequent re-rendering and significantly improve performance.",
+    techHighlights: [
+      "Spring Boot, NestJS, TypeScript, Docker, Kubernetes"
+    ],
+    role: "Lead Backend Developer",
+    impact: "Enabled Wing Bank to process hundreds of daily transactions and rapidly launch new business verticals.",
+    challenge: "Integrating multiple business domains while maintaining high availability and security.",
+    solution: "Implemented microservices, event-driven patterns, and robust monitoring."
+  },
+  {
+    title: 'Payroll Management System',
+    description: 'Built a comprehensive payroll management platform serving 1000+ employees using Java/Spring Boot backend and ReactJS frontend. Features include employee data management, payslip generation, fund management, performance tracking, and leave request processing with comprehensive reporting capabilities.',
+    imageSrc: require('@/public/b.png'),
+    keyFeatures: [
+      "Employee data management and role-based access",
+      "Automated payroll calculations and payslip generation",
+      "Comprehensive reporting and export features",
+      "Secure fund management and leave processing"
+    ],
+    techHighlights: [
+      "Spring Boot, ReactJS, PostgreSQL, Docker"
+    ],
+    role: "Full Stack Developer",
+    impact: "Streamlined payroll operations for 1000+ employees, improving accuracy and efficiency.",
+    challenge: "Handling large datasets and complex calculations while maintaining performance.",
+    solution: "Optimized backend logic, custom table components, and caching strategies."
   },
   {
     title: 'GPS Tracking System',
-    description:
-      'A web app for monitoring GPS devices. Receive real-time updates of location, speed, altitude, etc. Draw zone areas and assign devices directly on the map. Pinpoint the exact location and alert the screen and Telegram whenever the device is out of the zone.',
-    imageSrc: require('@/public/b.png'),
-    tectStacks: [
-      {
-        name: 'Create React App',
-        icon: <SiReact className="w-full h-full" />,
-      },
-      {
-        name: 'Chakra UI',
-        icon: ChakraUIIcon,
-      },
-      {
-        name: 'React Query',
-        icon: ReactQueryIcon,
-      },
-      {
-        name: 'Spring Boot',
-        icon: <SiSpringboot className="w-full h-full" />,
-      },
+    description: 'Developed a real-time GPS tracking system managing 50+ vehicles with WebSocket connections and ReactJS frontend with interactive mapping features. Features include real-time location tracking, geofencing, speed monitoring, and automated alerting systems.',
+    imageSrc: require('@/public/a.png'),
+    keyFeatures: [
+      "Real-time vehicle tracking with WebSockets",
+      "Interactive mapping and geofencing",
+      "Automated alerts for out-of-zone events",
+      "Scalable to dozens of vehicles"
     ],
-    challenge:
-      'Opting out of Redux, means there is no longer a global state in our React App to consume data from WebSockets.',
-    solution:
-      'Thanks to React Query, we can easily modify the cached data and broadcast new data across the app without having to re-fetch queries.',
+    techHighlights: [
+      "Spring Boot, WebSocket, ReactJS, MongoDB"
+    ],
+    role: "Backend & Integration Developer",
+    impact: "Enabled real-time fleet management and improved operational safety.",
+    challenge: "Ensuring low latency and reliable data delivery for 50+ vehicles.",
+    solution: "Efficient WebSocket streaming, MongoDB for flexible storage, and robust backend processing."
   },
 ];
+
+export const experience = [
+  {
+    company: "Wing Bank (Cambodia) Plc",
+    title: "Backend Developer",
+    period: "2022 - Present",
+    achievements: [
+      "Architected and delivered the WingUnified platform, supporting 4+ business verticals.",
+      "Mentored 3+ junior developers, improving team productivity and code quality.",
+      "Optimized backend performance, reducing API response times by 30%."
+    ]
+  },
+  {
+    company: "Web Essentials Co., Ltd",
+    title: "Web Developer",
+    period: "2022",
+    achievements: [
+      "Enhanced identity and risk assessment platform for global use.",
+      "Integrated new identity verification APIs for improved fraud detection.",
+      "Resolved performance bottlenecks for high-volume verification."
+    ]
+  },
+  {
+    company: "Udaya Technology Co., Ltd",
+    title: "Software Developer",
+    period: "2019 - 2022",
+    achievements: [
+      "Built payroll management platform for 1000+ employees.",
+      "Developed GPS tracking system for 50+ vehicles.",
+      "Created EMR system deployed in 10+ state hospitals."
+    ]
+  }
+];
+
+export const articles = [
+  // { title: "Scaling Microservices in Fintech", url: "https://..." }
+];
+
+export const contactCta = "Interested in working together or have a question? Feel free to reach out!";
