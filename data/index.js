@@ -16,6 +16,18 @@ import {
   SiNodedotjs,
   SiReact,
   SiTailwindcss,
+  SiNestjs,
+  SiTypescript,
+  SiJavascript,
+  SiGolang,
+  SiNextdotjs,
+  SiNuxtdotjs,
+  SiVuedotjs,
+  SiMysql,
+  SiFirebase,
+  SiGraphql,
+  SiAws,
+  SiGit,
 } from 'react-icons/si';
 import {
   RiGithubLine,
@@ -73,15 +85,16 @@ export const greeting = [
   () => 'My name is',
   () => (
     <>
-      <CustomLink name="Svay Thavirak." />
+      <CustomLink name="Thavirak Svay." />
     </>
   ),
   () => (
     <>
       <p>
-        A passionate backend developer with expertise in Spring Boot and Java ecosystem. I specialize in building scalable, 
-        high-performance REST APIs, microservices, and enterprise applications. Experienced in database design, 
-        cloud deployment, and DevOps practices. Committed to writing clean, maintainable code and following best practices.
+        Results-driven Backend Developer specializing in building robust and scalable applications using Spring Boot and microservices architectures. 
+        Experienced in the full development lifecycle with expertise in distributed systems, fintech solutions, and team leadership. 
+        Proven track record of delivering high-performance backend solutions for Cambodia's leading financial institutions, 
+        processing hundreds of daily transactions across multiple business verticals.
       </p>
       <br />
       <div className="flex items-center">
@@ -131,6 +144,15 @@ export const favoriteTechStacks = {
     ),
     () => <SiJava className="w-full h-full" />,
   ],
+  nestjs: [
+    () => (
+      <p>
+        <CustomLink href="https://nestjs.com" name="NestJS" />, powerful Node.js framework for building scalable server-side applications. 
+        I use it for microservices architecture with TypeScript, providing excellent structure and maintainability.
+      </p>
+    ),
+    () => <SiNestjs className="w-full h-full" />,
+  ],
   postgresql: [
     () => (
       <p>
@@ -139,15 +161,6 @@ export const favoriteTechStacks = {
       </p>
     ),
     () => <SiPostgresql className="w-full h-full" />,
-  ],
-  mongodb: [
-    () => (
-      <p>
-        <CustomLink href="https://www.mongodb.com" name="MongoDB" />, excellent for document-based data storage and 
-        when I need flexible schema design for rapid development and scaling.
-      </p>
-    ),
-    () => <SiMongodb className="w-full h-full" />,
   ],
   docker: [
     () => (
@@ -158,22 +171,22 @@ export const favoriteTechStacks = {
     ),
     () => <SiDocker className="w-full h-full" />,
   ],
-  redis: [
+  kubernetes: [
     () => (
       <p>
-        <CustomLink href="https://redis.io" name="Redis" />, perfect for caching, session management, and as an 
-        in-memory data store to improve application performance and reduce database load.
+        <CustomLink href="https://kubernetes.io" name="Kubernetes" />, for orchestrating containerized applications 
+        and managing microservices at scale with automated deployment, scaling, and operations.
       </p>
     ),
-    () => <SiRedis className="w-full h-full" />,
+    () => <SiKubernetes className="w-full h-full" />,
   ],
 };
 
 export const projects = [
   {
-    title: 'E-Commerce Microservices Platform',
+    title: 'WingUnified Platform - Fintech Super App',
     description:
-      'A scalable microservices-based e-commerce platform built with Spring Boot. Features include user authentication, product catalog, order management, payment processing, and inventory tracking. Implemented with event-driven architecture using Apache Kafka for inter-service communication.',
+      'Architected and built WingUnified platform using Java and Spring Boot microservices, enabling Wing Bank to launch integrated services across food delivery, e-commerce, logistics, and booking sectors. Built multiple platforms (WingMall, WingExpress, WingShopping, WingTicketing) using NestJS microservices, supporting Cambodia\'s leading super-app processing hundreds of daily transactions.',
     imageSrc: require('@/public/a.png'),
     tectStacks: [
       {
@@ -181,12 +194,12 @@ export const projects = [
         icon: <SiSpringboot className="w-full h-full" />,
       },
       {
-        name: 'PostgreSQL',
-        icon: <SiPostgresql className="w-full h-full" />,
+        name: 'NestJS',
+        icon: <SiNestjs className="w-full h-full" />,
       },
       {
-        name: 'Redis',
-        icon: <SiRedis className="w-full h-full" />,
+        name: 'TypeScript',
+        icon: <SiTypescript className="w-full h-full" />,
       },
       {
         name: 'Docker',
@@ -194,14 +207,14 @@ export const projects = [
       },
     ],
     challenge:
-      'Building a distributed system that maintains data consistency across multiple microservices while handling high concurrent user traffic and ensuring fault tolerance.',
+      'Building a comprehensive fintech ecosystem that integrates multiple business verticals while maintaining high availability, security, and processing hundreds of daily transactions across Cambodia.',
     solution:
-      'Implemented event sourcing with CQRS pattern, used distributed transactions with Saga pattern, and implemented circuit breakers for fault tolerance. Used Redis for caching and session management to improve performance.',
+      'Implemented microservices architecture with Spring Boot and NestJS, used event-driven patterns for inter-service communication, implemented robust error handling and monitoring, and established development standards that enhanced system reliability and scalability.',
   },
   {
-    title: 'Real-Time Analytics API',
+    title: 'Payroll Management System',
     description:
-      'A high-performance REST API for real-time data analytics and reporting. Processes millions of data points per day, provides real-time dashboards, and supports complex aggregations. Built with Spring Boot, optimized for low latency and high throughput.',
+      'Built a comprehensive payroll management platform serving 1000+ employees using Java/Spring Boot backend and ReactJS frontend. Features include employee data management, payslip generation, fund management, performance tracking, and leave request processing with comprehensive reporting capabilities.',
     imageSrc: require('@/public/b.png'),
     tectStacks: [
       {
@@ -209,21 +222,49 @@ export const projects = [
         icon: <SiSpringboot className="w-full h-full" />,
       },
       {
-        name: 'MongoDB',
-        icon: <SiMongodb className="w-full h-full" />,
+        name: 'ReactJS',
+        icon: <SiReact className="w-full h-full" />,
       },
       {
-        name: 'Redis',
-        icon: <SiRedis className="w-full h-full" />,
+        name: 'PostgreSQL',
+        icon: <SiPostgresql className="w-full h-full" />,
       },
       {
-        name: 'JUnit 5',
-        icon: <SiJunit5 className="w-full h-full" />,
+        name: 'Docker',
+        icon: <SiDocker className="w-full h-full" />,
       },
     ],
     challenge:
-      'Processing and analyzing large volumes of real-time data while maintaining sub-second response times and ensuring data accuracy across distributed systems.',
+      'Building a system that handles large datasets for 1000+ employees with complex payroll calculations, editable tables, and real-time data processing while maintaining performance.',
     solution:
-      'Implemented async processing with Spring WebFlux, used MongoDB aggregation pipelines for complex queries, implemented Redis caching for frequently accessed data, and used comprehensive testing with JUnit 5 and Mockito.',
+      'Implemented custom table components with optimized rendering, used Spring Boot for robust backend processing, implemented caching strategies, and built comprehensive reporting modules with export capabilities.',
+  },
+  {
+    title: 'GPS Tracking System',
+    description:
+      'Developed a real-time GPS tracking system managing 50+ vehicles with WebSocket connections and ReactJS frontend with interactive mapping features. Features include real-time location tracking, geofencing, speed monitoring, and automated alerting systems.',
+    imageSrc: require('@/public/a.png'),
+    tectStacks: [
+      {
+        name: 'Spring Boot',
+        icon: <SiSpringboot className="w-full h-full" />,
+      },
+      {
+        name: 'WebSocket',
+        icon: <SiReact className="w-full h-full" />,
+      },
+      {
+        name: 'ReactJS',
+        icon: <SiReact className="w-full h-full" />,
+      },
+      {
+        name: 'MongoDB',
+        icon: <SiMongodb className="w-full h-full" />,
+      },
+    ],
+    challenge:
+      'Implementing real-time GPS tracking with WebSocket connections for 50+ vehicles while ensuring low latency, accurate location data, and reliable alerting systems.',
+    solution:
+      'Used WebSocket connections for real-time data streaming, implemented efficient data processing with Spring Boot, used MongoDB for flexible location data storage, and built interactive mapping features with ReactJS.',
   },
 ];

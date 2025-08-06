@@ -1,16 +1,37 @@
-# Backend Developer Portfolio
+# Thavirak Svay - Backend Developer Portfolio
 
-A modern, responsive portfolio website showcasing my backend development expertise, particularly in Spring Boot and Java ecosystem. Built with Next.js and Tailwind CSS.
+A modern, responsive portfolio website showcasing my backend development expertise, particularly in Spring Boot, microservices, and fintech solutions. Built with Next.js and Tailwind CSS.
 
 ## About
 
+Results-driven Backend Developer specializing in building robust and scalable applications using Spring Boot and microservices architectures. Experienced in the full development lifecycle with expertise in distributed systems, fintech solutions, and team leadership.
+
 This portfolio highlights my experience in:
-- **Spring Boot** - Building robust, production-ready backend applications
-- **Java** - Core programming language with strong typing and OOP principles
-- **Database Design** - PostgreSQL, MongoDB, Redis for different use cases
-- **Microservices** - Distributed systems and event-driven architecture
-- **DevOps** - Docker, CI/CD, cloud deployment
-- **API Development** - RESTful APIs, authentication, and performance optimization
+- **Spring Boot & Java** - Building robust, production-ready backend applications
+- **Microservices Architecture** - Distributed systems and event-driven architecture
+- **Fintech Solutions** - High-performance backend solutions for financial institutions
+- **Team Leadership** - Leading development teams and establishing standards
+- **Database Design** - PostgreSQL, MongoDB, MySQL for different use cases
+- **DevOps & Cloud** - Docker, Kubernetes, AWS, Jenkins, CI/CD
+- **Full-Stack Development** - ReactJS, NestJS, TypeScript, GoLang
+
+## Professional Experience
+
+### Backend Developer at Wing Bank (Cambodia) Plc (2022 - Present)
+- Architected WingUnified platform using Java and Spring Boot microservices
+- Built multiple platforms (WingMall, WingExpress, WingShopping, WingTicketing) using NestJS
+- Led and mentored development teams while establishing development standards
+- Processed hundreds of daily transactions across Cambodia's leading super-app
+
+### Web Developer at Web Essentials Co., Ltd (2022)
+- Enhanced identity and risk assessment platform using NuxtJS and GoLang
+- Integrated identity verification provider APIs for fraud detection
+- Resolved performance bottlenecks for high-volume verification processing
+
+### Software Developer at Udaya Technology Co., Ltd (2019 - 2022)
+- Built comprehensive payroll management platform serving 1000+ employees
+- Developed real-time GPS tracking system managing 50+ vehicles
+- Created Electronic Medical Records (EMR) system deployed across 10+ state hospitals
 
 ## Getting Started
 
@@ -24,15 +45,14 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
 ## Tech Stack
 
-- **Frontend**: Next.js, React, Tailwind CSS, Framer Motion
-- **Backend Focus**: Spring Boot, Java, PostgreSQL, MongoDB, Redis
-- **DevOps**: Docker, Kubernetes, Jenkins
+- **Backend**: Spring Boot, Java, NestJS, TypeScript, GoLang
+- **Frontend**: ReactJS, NextJS, NuxtJS, VueJS
+- **Databases**: PostgreSQL, MySQL, MongoDB, Firebase, GraphQL
+- **DevOps**: Docker, Kubernetes, AWS, Jenkins, Git
+- **UI/UX**: Tailwind CSS, Material UI, Chakra UI, Shadcn UI
 - **Testing**: JUnit 5, Mockito
-- **Documentation**: Swagger/OpenAPI
 
 ## Features
 
@@ -42,6 +62,12 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 - Project showcase with detailed descriptions
 - Contact information and social links
 - Professional backend-focused content
+
+## Contact
+
+- **Email**: thaavirak@gmail.com
+- **Phone**: +855 70 933 433
+- **LinkedIn**: [linkedin.com/in/thavirak-svay](https://linkedin.com/in/thavirak-svay)
 
 ## Deployment
 
